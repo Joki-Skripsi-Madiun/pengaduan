@@ -65,7 +65,7 @@
                     <div class="col-sm-5">
                         <div class="d-flex justify-content-center"><img width="100px" src="<?= base_url(); ?>/img/logosekolah.png"></a></div>
                         <h6 class="clever_text text-center"><?= $u['judul_setting'] ?></h6>
-                        <div class="read_bt_2 d-flex justify-content-center"><a href="#">Login</a></div>
+                        <div class="read_bt_2 d-flex justify-content-center"><a href="<?= base_url(); ?>/login">Login</a></div>
                     </div>
                 <?php endforeach ?>
             </div>
