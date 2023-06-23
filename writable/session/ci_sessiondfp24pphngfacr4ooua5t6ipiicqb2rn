@@ -1,0 +1,12 @@
+__ci_last_regenerate|i:1687403215;_ci_previous_url|s:39:"http://localhost:8080/data-akun/edit/14";logged_in|s:1:"1";error|s:326:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>No Induk Harus diisi</li>
+					<li>Kelas Harus diisi</li>
+					<li>No HP Harus diisi</li>
+					<li>Alamat Harus diisi</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:3:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:10:{s:7:"id_akun";s:2:"14";s:12:"passwordLama";s:60:"$2y$10$BpoI5ga48TgK6SZQVZAUouugGeZoLU8j6lPtgR8sjb8fAXUNHlA.e";s:8:"fotoLama";s:18:"default-avatar.jpg";s:5:"email";s:22:"fuadiazhar12@gmail.com";s:8:"fullname";s:4:"Mita";s:13:"jenis_kelamin";s:1:"1";s:6:"alamat";s:0:"";s:8:"username";s:4:"mita";s:13:"password_hash";s:9:"Sukses23@";s:12:"confpassword";s:9:"Sukses23@";}}_ci_validation_errors|a:4:{s:8:"no_induk";s:20:"No Induk Harus diisi";s:5:"kelas";s:17:"Kelas Harus diisi";s:5:"no_hp";s:17:"No HP Harus diisi";s:6:"alamat";s:18:"Alamat Harus diisi";}
