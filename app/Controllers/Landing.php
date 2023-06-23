@@ -24,7 +24,7 @@ class Landing extends BaseController
         $id_setting = 1;
         $data = [
             'validation' => \Config\Services::validation(),
-            'setting' => $this->settingModel->getsetting($id_setting),
+            'landing' => $this->landingModel->getlanding($id_setting),
 
         ];
         return view('landing', $data);
@@ -105,5 +105,15 @@ class Landing extends BaseController
         ]);
         session()->setFlashdata('pesan', 'Tambah Data Surat Masuk Berhasil');
         return redirect()->to('landing');
+    }
+    public function web()
+    {
+
+        $data = [
+            'validation' => \Config\Services::validation(),
+            'landing' => $this->landingModel->getlanding(),
+
+        ];
+        return view('web', $data);
     }
 }
