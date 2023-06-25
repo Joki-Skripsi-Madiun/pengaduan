@@ -20,24 +20,12 @@ class KelasModel extends Model
         return $this->where(['id_kelas' => $id_kelas])->first();
     }
 
-    public function hitungJumlahPengantar()
+    public function hitungJumlahKelas()
     {
-        $tb_pengantar = $this->query('SELECT * FROM tb_pengantar');
-        return $tb_pengantar->getNumRows();
+        $db = \Config\Database::connect();
+        $query = $db->table('kelas');
+        $query->selectCount('id_kelas');
+        $result = $query->countAllResults();
+        return $result;
     }
-    // public function joinMobil($id_akun = false)
-    // {
-    //     if ($id_akun == false) {
-    //         $db      = \Config\Database::connect();
-    //         $builder = $db->table('mobil');
-    //         $builder->select('*');
-    //         $builder->join('merk', 'merk.id_merk = mobil.id_merk');
-    //         $query = $builder->get();
-    //         return $query;
-    //     }
-    //     return $this->where(['id_akun' => $id_akun])->first();
-    // }
-
-
-
 }

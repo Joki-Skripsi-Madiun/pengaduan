@@ -19,18 +19,21 @@
                                 <thead class="text-dark fs-4">
                                     <tr>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Id</h6>
+                                            <h6 class="fw-semibold mb-0">No</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Nama Siswa</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Jenis Pelanggaran</h6>
+                                            <h6 class="fw-semibold mb-0">Kelas</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Status</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Poin</h6>
                                         </th>
-                                        <th class="border-bottom-0">
+                                        <th class="border-bottom-0" style="text-align: center;">
                                             <h6 class="fw-semibold mb-0">Aksi</h6>
                                         </th>
 
@@ -38,6 +41,15 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($siswa as $rw) {
+                                        $row = "row" . $rw['id_siswa'];
+                                        echo $$row;
+                                    }
+                                    ?>
+                                </tbody>
+                                <!-- <tbody>
                                     <?php foreach ($joinpelanggaran as $u) : ?>
                                         <tr>
                                             <td class="border-bottom-0">
@@ -61,7 +73,7 @@
                                         </tr>
                                     <?php endforeach ?>
 
-                                </tbody>
+                                </tbody> -->
                             </table>
                         </div>
                     </div>

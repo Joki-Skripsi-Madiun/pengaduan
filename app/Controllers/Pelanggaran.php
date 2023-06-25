@@ -13,7 +13,7 @@ class Pelanggaran extends BaseController
         $data = [
             'session' => $session,
             'siswa' => $this->siswaModel->getsiswa(),
-            'pelanggaran' => $this->pelanggaranModel->getpelanggaran(),
+            'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
             'jenis' => $this->jenisModel->getjenis(),
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
             'joinsiswa' => $this->siswaModel->joinsiswa(),

@@ -19,6 +19,14 @@ class Laporan extends BaseController
             'joinsiswa' => $this->siswaModel->joinsiswa(),
 
         ];
+        $no = 1;
+        foreach ($data['siswa'] as $row) {
+            $dataRow['no'] = $no++;
+            $dataRow['jumlahBobot'] = $this->pelanggaranModel->joinPelanggaranSumBobot($row['id_siswa']);
+            $dataRow['kelas'] = $this->kelasModel->where('id_kelas', $row['id_kelas'])->findAll();
+            $dataRow['row'] = $row;
+            $data['row' . $row['id_siswa']] = view('laporan/row', $dataRow);
+        }
         return view('laporan/index', $data);
     }
     public function prestasi()
