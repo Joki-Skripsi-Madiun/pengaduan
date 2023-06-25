@@ -31,7 +31,7 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Dashboard::index', ['filter' => 'role:administrator, user']);
+$routes->get('/', 'Landing::web');
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'role:administrator, user,kepsek'], ['as' => 'dashboard']);
 
 
@@ -123,6 +123,11 @@ $routes->delete('/pelanggaran/(:num)', 'Pelanggaran::delete/$1', ['filter' => 'a
 // Landing
 $routes->get('/landing', 'Landing::index', ['filter' => 'auth']);
 $routes->post('/landing/update', 'Landing::update', ['filter' => 'auth']);
+
+// Laporan
+
+$routes->get('/laporan', 'Laporan::index', ['filter' => 'auth']);
+$routes->get('/laporan/prestasi', 'Laporan::prestasi', ['filter' => 'auth']);
 
 
 // Login Register

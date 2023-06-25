@@ -130,7 +130,7 @@
                      <span class="hide-menu">Laporan</span>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>/laporan" aria-expanded="false">
                          <span>
                              <i class="ti ti-files"></i>
                          </span>
@@ -138,7 +138,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>/laporan/prestasi" aria-expanded="false">
                          <span>
                              <i class="ti ti-file"></i>
                          </span>
