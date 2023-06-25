@@ -8,7 +8,7 @@
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Data Prestasi</h5>
-                        <right><a class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" href="<?= base_url(); ?>/">
+                        <right><a class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" href="<?= base_url(); ?>/laporan/prestasi/print">
                                 Cetak</a></right>
                         <br>
                         <br>

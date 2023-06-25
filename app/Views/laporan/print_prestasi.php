@@ -1,80 +1,69 @@
-<?= $this->extend('layout/template'); ?>
-<?= $this->section('content'); ?>
-<!--  Header End -->
-<div class="container-fluid">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card w-100">
-                    <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">Data Prestasi</h5>
-                        <right><a class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" href="<?= base_url(); ?>/">
-                                Cetak</a></right>
-                        <br>
-                        <br>
-                        <br>
-                        <div class="table-responsive">
-                            <table id="data1" class="table table-avatar bg-grey text-black">
-                                <thead class="text-dark fs-4">
-                                    <tr>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Id</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Nama Siswa</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Jenis Prestasi</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Aksi</h6>
-                                        </th>
+<!doctype html>
+<html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Laporan Prestasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
 
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($joinprestasi as $u) : ?>
-                                        <tr>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-0">1</h6>
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['nama_siswa'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['nama_prestasi'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/prestasi/edit/<?= $u['id_prestasi'] ?>">
-                                                        Edit</a>
-                                                    <a class="badge bg-success rounded-2 fw-semibold" href="<?= base_url(); ?>/prestasi/view/<?= $u['id_prestasi'] ?>">
-                                                        Detail</a>
-                                                    <form action="<?= base_url(); ?>/prestasi/<?= $u['id_prestasi']; ?>" method="post" class="d-inline">
-
-                                                        <?= csrf_field(); ?>
-
-                                                        <input type="hidden" name="_method" value="DELETE">
-
-                                                        <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" onclick="return confirm('Apakah Anda Yakin ?');"><i class="fas fa-edit fa-sm text-white-50"></i> Hapus</a> </button>
-
-                                                    </form>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach ?>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+    <div class="container">
+        <div class="text-center my-5">
+            <h1>Laporan Prestasi</h1>
+            <h4>SMPN 2 Nglames</h4>
+            <hr>
+            <h5><b>Daftar Prestasi</b></h5>
         </div>
-    </div>
-</div>
+        <table class="table table-bordered">
+            <thead class="text-dark fs-4">
+                <tr>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">No</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Nama Siswa</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Kelas</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Jenis Prestasi</h6>
+                    </th>
+                    <th class="border-bottom-0">
+                        <h6 class="fw-semibold mb-0">Aksi</h6>
+                    </th>
 
-<?= $this->endSection(); ?>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($joinprestasi as $u) : ?>
+                    <tr>
+                        <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-0">1</h6>
+                        </td>
+                        <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-1"><?= $u['nama_siswa'] ?></h6>
+                        </td>
+                        <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-1"><?= $u['nama_kelas'] ?></h6>
+                        </td>
+                        <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-1"><?= $u['nama_prestasi'] ?></h6>
+                        </td>
+                        <td class="border-bottom-0">
+                            <h6 class="fw-semibold mb-1"><?= $u['tingkat_prestasi'] ?></h6>
+                        </td>
+
+                    </tr>
+                <?php endforeach ?>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+
+</html>

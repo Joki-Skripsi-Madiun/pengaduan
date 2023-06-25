@@ -29,8 +29,6 @@
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Aksi</h6>
                                         </th>
-
-
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -54,11 +52,8 @@
                                                     <a class="badge bg-success rounded-2 fw-semibold" href="<?= base_url(); ?>/prestasi/view/<?= $u['id_prestasi'] ?>">
                                                         Detail</a>
                                                     <form action="<?= base_url(); ?>/prestasi/<?= $u['id_prestasi']; ?>" method="post" class="d-inline">
-
                                                         <?= csrf_field(); ?>
-
                                                         <input type="hidden" name="_method" value="DELETE">
-
                                                         <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" onclick="return confirm('Apakah Anda Yakin ?');"><i class="fas fa-edit fa-sm text-white-50"></i> Hapus</a> </button>
 
                                                     </form>
