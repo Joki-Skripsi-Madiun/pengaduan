@@ -73,6 +73,7 @@
                                 </tfoot>
                                 <tbody>
                                     <?php
+                                    $no = 1;
                                     foreach ($users as $rw) {
                                         $row = "row" . $rw->id;
                                         echo $$row;

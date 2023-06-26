@@ -81,10 +81,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($joinprestasi as $u) : ?>
+                                    <?php $no = 1;
+                                    foreach ($joinprestasi as $u) : ?>
                                         <tr>
                                             <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-0">1</h6>
+                                                <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
                                             </td>
                                             <td class="border-bottom-0">
                                                 <h6 class="fw-semibold mb-1"><?= $u['nama_siswa'] ?></h6>

@@ -69,7 +69,7 @@
                                     foreach ($joinjenis as $u) : ?>
                                         <tr>
                                             <td>
-                                                <h6 class="fw-semibold mb-0"><?= $no; ?></h6>
+                                                <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
                                             </td>
                                             <td>
                                                 <h6 class="fw-semibold mb-1"><?= $u['nama_jenis'] ?></h6>

@@ -73,3 +73,95 @@ INFO - 2023-06-26 00:43:59 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-06-26 00:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-26 00:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-26 00:45:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:46:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:46:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:47:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:48:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-26 00:50:28 --> Undefined variable $no
+in APPPATH\Views\data_akun\row.php on line 2.
+ 1 APPPATH\Views\data_akun\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('data_akun/row', [], true)
+ 5 APPPATH\Controllers\DataAkun.php(36): view('data_akun/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DataAkun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataAkun))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-06-26 00:50:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-26 00:50:31 --> Undefined variable $no
+in APPPATH\Views\data_akun\row.php on line 2.
+ 1 APPPATH\Views\data_akun\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('data_akun/row', [], true)
+ 5 APPPATH\Controllers\DataAkun.php(36): view('data_akun/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DataAkun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataAkun))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-06-26 00:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-26 00:50:42 --> Undefined variable $no
+in APPPATH\Views\data_akun\row.php on line 2.
+ 1 APPPATH\Views\data_akun\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('data_akun/row', [], true)
+ 5 APPPATH\Controllers\DataAkun.php(36): view('data_akun/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DataAkun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataAkun))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-06-26 00:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-26 00:51:10 --> Undefined variable $no
+in APPPATH\Views\data_akun\row.php on line 2.
+ 1 APPPATH\Views\data_akun\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('data_akun/row', [], true)
+ 5 APPPATH\Controllers\DataAkun.php(36): view('data_akun/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DataAkun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataAkun))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-06-26 00:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-26 00:51:39 --> Undefined variable $no
+in APPPATH\Views\data_akun\row.php on line 2.
+ 1 APPPATH\Views\data_akun\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\data_akun\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('data_akun/row', [], true)
+ 5 APPPATH\Controllers\DataAkun.php(36): view('data_akun/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\DataAkun->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DataAkun))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-06-26 00:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:51:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-26 00:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

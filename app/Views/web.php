@@ -55,7 +55,7 @@
     <!-- header section start -->
     <!-- header section end -->
     <!-- banner section start -->
-    <div class="banner_section layout_padding">
+    <div class="banner_section">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-7">
