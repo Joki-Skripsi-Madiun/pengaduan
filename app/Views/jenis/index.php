@@ -65,10 +65,11 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($joinjenis as $u) : ?>
+                                    <?php $no = 1;
+                                    foreach ($joinjenis as $u) : ?>
                                         <tr>
                                             <td>
-                                                <h6 class="fw-semibold mb-0">1</h6>
+                                                <h6 class="fw-semibold mb-0"><?= $no; ?></h6>
                                             </td>
                                             <td>
                                                 <h6 class="fw-semibold mb-1"><?= $u['nama_jenis'] ?></h6>
