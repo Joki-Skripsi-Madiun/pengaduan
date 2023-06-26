@@ -9,7 +9,7 @@
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Data Pelanggaran</h5>
                         <right><a class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" href="<?= base_url(); ?>/laporan/pelanggaran/print">
-                                Cetak</a></right>
+                                Cetak Semua</a></right>
                         <br>
                         <br>
                         <br>

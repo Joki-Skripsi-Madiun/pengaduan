@@ -8,10 +8,26 @@
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Data Prestasi</h5>
-                        <right><a class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm" href="<?= base_url(); ?>/laporan/prestasi/print">
-                                Cetak</a></right>
-                        <br>
-                        <br>
+                        <div class="row">
+                            <div class="col-2">
+                                <form action="#" method="post">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_kelas">
+                                        <option selected>Pilih Tingkatan</option>
+                                        <option value="Lokal">Lokal</option>
+                                        <option value="Nasional">Nasional</option>
+                                        <option value="Internasional">Internasional</option>
+
+                                    </select>
+                            </div>
+                            <div class="col-3"><button type="submit" class="btn btn-primary">Pilih</button>
+                                </form>
+                                <a class="d-none d-sm-inline-block btn btn-success shadow-sm ms-5" href="<?= base_url(); ?>/laporan/prestasi/print">
+                                    Cetak Semua</a>
+                            </div>
+
+                            <div class="col-3"></div>
+                        </div>
+                        <right></right>
                         <br>
                         <div class="table-responsive">
                             <table id="data1" class="table table-avatar bg-grey text-black">

@@ -12,6 +12,9 @@
     <td><?= $jumlahBobot; ?></td>
 
     <td align="center">
+        <a href="<?= base_url(); ?>/laporan/pelanggaran/individu/print/<?= $row['id_siswa']; ?>" class="btn btn-warning btn-circle btn-sm">
+            Cetak Laporan Individu
+        </a>
         <?php if ($jumlahBobot >= 100) { ?>
             <a href="<?= base_url(); ?>/laporan/pelanggaran/print/<?= $row['id_siswa']; ?>" class="btn btn-danger btn-circle btn-sm" title="Ubah Password">
                 Cetak Surat Peringatan
