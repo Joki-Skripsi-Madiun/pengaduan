@@ -20,11 +20,7 @@ class PrestasiModel extends Model
         return $this->where(['id_prestasi' => $id_prestasi])->first();
     }
 
-    public function hitungJumlahPrestasi()
-    {
-        $prestasi = $this->query('SELECT * FROM prestasi');
-        return $prestasi->getNumRows();
-    }
+
     public function joinPrestasi($id_prestasi = false)
     {
         if ($id_prestasi == false) {
@@ -33,6 +29,7 @@ class PrestasiModel extends Model
             $builder->select('*');
             $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
             $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
+            $builder->orderBy('id_prestasi', 'DESC');
             $query = $builder->get();
             return $query->getResultArray();
         }
@@ -42,22 +39,30 @@ class PrestasiModel extends Model
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
         $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->where('id_prestasi', $id_prestasi);
+        $builder->orderBy('id_prestasi', 'DESC');
         $query = $builder->get();
         return $query->getResultArray();
     }
-    // public function joinMobil($id_akun = false)
-    // {
-    //     if ($id_akun == false) {
-    //         $db      = \Config\Database::connect();
-    //         $builder = $db->table('mobil');
-    //         $builder->select('*');
-    //         $builder->join('merk', 'merk.id_merk = mobil.id_merk');
-    //         $query = $builder->get();
-    //         return $query;
-    //     }
-    //     return $this->where(['id_akun' => $id_akun])->first();
-    // }
 
+    public function joinPrestasiLimit($limit)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('prestasi');
+        $builder->select('*');
+        $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
+        $builder->orderBy('id_prestasi', 'DESC');
+        $builder->limit($limit);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
 
-
+    public function hitungJumlahPrestasi()
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('prestasi');
+        $query->selectCount('id_prestasi');
+        $result = $query->countAllResults();
+        return $result;
+    }
 }

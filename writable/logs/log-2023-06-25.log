@@ -1,0 +1,569 @@
+INFO - 2023-06-25 07:20:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:21:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:21:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:41:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:48:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 07:48:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-25 09:16:29 --> mysqli_sql_exception: Column 'id_siswa' in where clause is ambiguous in C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`jen...', 0)
+#1 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`jen...')
+#2 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`jen...')
+#3 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`jen...', Array, false)
+#4 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\app\Models\PelanggaranModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\app\Controllers\Laporan.php(23): App\Models\PelanggaranModel->joinPelanggaranSumBobot('1')
+#6 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Laporan->index()
+#7 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\...')
+#11 {main}
+CRITICAL - 2023-06-25 09:16:29 --> Column 'id_siswa' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`jenis_pelanggaran` .`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_jenis`
+WHERE `id_siswa` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`jenis_pelanggaran` .`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_jenis`
+WHERE `id_siswa` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`jenis_pelanggaran` .`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_jenis`
+WHERE `id_siswa` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`jenis_pelanggaran` .`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_jenis`
+WHERE `id_siswa` = :id_siswa:', [...], false)
+ 5 APPPATH\Models\PelanggaranModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(23): App\Models\PelanggaranModel->joinPelanggaranSumBobot('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:17:24 --> Attempt to read property "id" on array
+in APPPATH\Controllers\Laporan.php on line 25.
+ 1 APPPATH\Controllers\Laporan.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Controllers\\Laporan.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:18:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:18:23 --> Attempt to read property "id" on array
+in APPPATH\Views\laporan\row.php on line 2.
+ 1 APPPATH\Views\laporan\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(25): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:21:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:21:30 --> Attempt to read property "id" on array
+in APPPATH\Views\laporan\index.php on line 43.
+ 1 APPPATH\Views\laporan\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\index.php', 43)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/index', [], true)
+ 5 APPPATH\Controllers\Laporan.php(27): view('laporan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:22:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:24:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:26:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:28:10 --> Undefined array key "kelas"
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:28:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:28:52 --> Undefined array key "kelas"
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:29:17 --> Undefined array key 0
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:29:34 --> Undefined array key "kelas"
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kelas"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:29:47 --> Undefined array key 0
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:30:17 --> Undefined array key 0
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:30:39 --> Undefined array key "nama_kelas"
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:31:56 --> Undefined array key "nama_kelas"
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:31:59 --> Undefined array key "nama_kelas"
+in APPPATH\Views\laporan\row.php on line 3.
+ 1 APPPATH\Views\laporan\row.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kelas"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:32:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:36:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:38:23 --> Undefined variable $no
+in APPPATH\Views\laporan\row.php on line 2.
+ 1 APPPATH\Views\laporan\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 09:40:43 --> Undefined variable $no
+in APPPATH\Views\laporan\row.php on line 2.
+ 1 APPPATH\Views\laporan\row.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $no', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\row.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/row', [], true)
+ 5 APPPATH\Controllers\Laporan.php(26): view('laporan/row', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 09:42:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 09:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:03:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:13:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:22:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-25 10:23:03 --> mysqli_sql_exception: Unknown column 'jenis_pelanggaran.id_pelanggaran' in 'on clause' in C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`jen...', 0)
+#1 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`jen...')
+#2 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`jen...')
+#3 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`jen...', Array, false)
+#4 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\app\Models\PelanggaranModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\app\Controllers\Laporan.php(25): App\Models\PelanggaranModel->joinPelanggaranSumBobot('1')
+#6 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Laporan->index()
+#7 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\isaka\OneDrive\Dokumen\application\ci4\pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\...')
+#11 {main}
+CRITICAL - 2023-06-25 10:23:03 --> Unknown column 'jenis_pelanggaran.id_pelanggaran' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`jenis_pelanggaran`.`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_pelanggaran`
+WHERE `pelanggaran`.`id_siswa` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`jenis_pelanggaran`.`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_pelanggaran`
+WHERE `pelanggaran`.`id_siswa` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`jenis_pelanggaran`.`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_pelanggaran`
+WHERE `pelanggaran`.`id_siswa` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`jenis_pelanggaran`.`bobot`) AS `bobot`
+FROM `pelanggaran`
+JOIN `siswa` ON `siswa`.`id_siswa` = `pelanggaran`.`id_siswa`
+JOIN `kelas` ON `kelas`.`id_kelas` = `siswa`.`id_kelas`
+JOIN `jenis_pelanggaran` ON `jenis_pelanggaran`.`id_jenis` = `pelanggaran`.`id_jenis`
+JOIN `kategori_pelanggaran` ON `kategori_pelanggaran`.`id_kategori` = `jenis_pelanggaran`.`id_pelanggaran`
+WHERE `pelanggaran`.`id_siswa` = :pelanggaran.id_siswa:', [...], false)
+ 5 APPPATH\Models\PelanggaranModel.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(25): App\Models\PelanggaranModel->joinPelanggaranSumBobot('1')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 10:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:31:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:31:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:39:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:49:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:49:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 10:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:49:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 11:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:49:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:50:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:56:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:57:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 18:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:10:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 19:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:15:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:30:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:33:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 20:44:40 --> Undefined variable $nama
+in APPPATH\Views\dashboard\index.php on line 117.
+ 1 APPPATH\Views\dashboard\index.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 117)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 20:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 20:45:00 --> Undefined variable $nama_siswa
+in APPPATH\Views\dashboard\index.php on line 117.
+ 1 APPPATH\Views\dashboard\index.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_siswa', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 117)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 20:48:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 20:48:48 --> Undefined variable $nama_siswa
+in APPPATH\Views\dashboard\index.php on line 117.
+ 1 APPPATH\Views\dashboard\index.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $nama_siswa', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 117)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 20:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 20:54:03 --> Undefined array key "nama_pelanggaran"
+in APPPATH\Views\dashboard\index.php on line 172.
+ 1 APPPATH\Views\dashboard\index.php(172): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_pelanggaran"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 172)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 20:54:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 20:54:41 --> Undefined array key "kategori_pelanggaran"
+in APPPATH\Views\dashboard\index.php on line 176.
+ 1 APPPATH\Views\dashboard\index.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kategori_pelanggaran"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 176)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 20:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 20:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:00:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:01:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:03:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 21:05:34 --> Call to a member function limit() on array
+in APPPATH\Controllers\Dashboard.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 21:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:06:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 21:08:34 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\dashboard\index.php on line 162.
+ 1 APPPATH\Views\dashboard\index.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 162)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 21:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 21:09:26 --> Undefined array key "nama_siswa"
+in APPPATH\Views\dashboard\index.php on line 168.
+ 1 APPPATH\Views\dashboard\index.php(168): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_siswa"', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php', 168)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(23): view('dashboard/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 21:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:42:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 21:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 22:05:59 --> Undefined variable $joinprestasi
+in APPPATH\Views\laporan\print_pelanggaran.php on line 37.
+ 1 APPPATH\Views\laporan\print_pelanggaran.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $joinprestasi', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\print_pelanggaran.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\print_pelanggaran.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/print_pelanggaran', [], true)
+ 5 APPPATH\Controllers\Laporan.php(84): view('laporan/print_pelanggaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->printPelanggaran()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 22:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-25 22:09:33 --> Undefined variable $joinprestasi
+in APPPATH\Views\laporan\print_pelanggaran.php on line 37.
+ 1 APPPATH\Views\laporan\print_pelanggaran.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $joinprestasi', 'C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\print_pelanggaran.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\app\\Views\\laporan\\print_pelanggaran.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('laporan/print_pelanggaran', [], true)
+ 5 APPPATH\Controllers\Laporan.php(77): view('laporan/print_pelanggaran', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Laporan->printPelanggaran()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\isaka\\OneDrive\\Dokumen\\application\\ci4\\pengaduan\\public\\index.php')
+INFO - 2023-06-25 22:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:11:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:13:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:15:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:19:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:20:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:20:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:20:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:20:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:22:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:28:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-25 22:43:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
