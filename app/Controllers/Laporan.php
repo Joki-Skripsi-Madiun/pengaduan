@@ -104,6 +104,7 @@ class Laporan extends BaseController
             'siswa' => $this->siswaModel->getsiswa(),
             'pelanggaran' => $this->pelanggaranModel->getpelanggaran(),
             'jenis' => $this->jenisModel->getjenis(),
+            'joinprestasi' => $this->prestasiModel->joinprestasi(),
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
 

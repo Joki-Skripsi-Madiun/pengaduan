@@ -29,7 +29,8 @@
                                 <label for="exampleInputtext1" class="form-label">Tingkat</label>
                                 <select class="form-select px-3" id="floatingSelect" aria-label="Floating label select example" name="tingkat_prestasi">
                                     <option selected>Open this select menu</option>
-                                    <option value="Lokal">Lokal</option>
+                                    <option value="Kabupaten/Kota">Kabupaten/Kota</option>
+                                    <option value="Provinsi">Provinsi</option>
                                     <option value="Nasional">Nasional</option>
                                     <option value="Internasional">Internasional</option>
 
