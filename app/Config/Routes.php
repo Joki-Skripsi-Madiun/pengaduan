@@ -130,6 +130,7 @@ $routes->get('/laporan', 'Laporan::index', ['filter' => 'auth']);
 $routes->get('/laporan/prestasi', 'Laporan::prestasi', ['filter' => 'auth']);
 
 $routes->get('/laporan/prestasi/print', 'Laporan::printPrestasi', ['filter' => 'auth']);
+$routes->get('/laporan/pelanggaran/detail/print/(:num)', 'Laporan::printPelanggaranDetail/$1', ['filter' => 'auth']);
 $routes->get('/laporan/pelanggaran/print', 'Laporan::printPelanggaran', ['filter' => 'auth']);
 $routes->get('/laporan/pelanggaran/print/(:num)', 'Laporan::printPelanggaranSiswa/$1', ['filter' => 'auth']);
 

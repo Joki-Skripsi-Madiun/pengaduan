@@ -76,6 +76,24 @@ class Laporan extends BaseController
 
         return view('laporan/print_pelanggaran', $data);
     }
+
+    public function printPelanggaranDetail($id_siswa)
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
+            'jenis' => $this->jenisModel->getjenis(),
+            'joinpelanggaran' => $this->pelanggaranModel->joinPelanggaranSiswa($id_siswa),
+            'joinsiswa' => $this->siswaModel->joinsiswa(),
+
+        ];
+
+        return view('laporan/print_pelanggaran_siswa', $data);
+    }
     public function printPelanggaranSiswa()
     {
         //include helper form
