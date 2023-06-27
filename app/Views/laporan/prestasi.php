@@ -13,7 +13,8 @@
                                 <form action="#" method="post">
                                     <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_kelas">
                                         <option selected>Pilih Tingkatan</option>
-                                        <option value="Lokal">Lokal</option>
+                                        <option value="Kabupaten/Kota">Kabupaten/Kota</option>
+                                        <option value="Provinsi">Provinsi</option>
                                         <option value="Nasional">Nasional</option>
                                         <option value="Internasional">Internasional</option>
 
@@ -21,11 +22,11 @@
                             </div>
                             <div class="col-3"><button type="submit" class="btn btn-primary">Pilih</button>
                                 </form>
-                                <a class="d-none d-sm-inline-block btn btn-success shadow-sm ms-5" href="<?= base_url(); ?>/laporan/prestasi/print">
-                                    Cetak Semua</a>
+
                             </div>
 
-                            <div class="col-3"></div>
+                            <div class="col-3"><a class="d-none d-sm-inline-block btn btn-success shadow-sm ms-5" href="<?= base_url(); ?>/laporan/prestasi/print">
+                                    Cetak Semua</a></div>
                         </div>
                         <right></right>
                         <br>
@@ -66,18 +67,8 @@
                                             <td class="border-bottom-0">
                                                 <div class="d-flex align-items-center gap-2">
                                                     <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/prestasi/edit/<?= $u['id_prestasi'] ?>">
-                                                        Edit</a>
-                                                    <a class="badge bg-success rounded-2 fw-semibold" href="<?= base_url(); ?>/prestasi/view/<?= $u['id_prestasi'] ?>">
-                                                        Detail</a>
-                                                    <form action="<?= base_url(); ?>/prestasi/<?= $u['id_prestasi']; ?>" method="post" class="d-inline">
+                                                        Cetak Prestasi</a>
 
-                                                        <?= csrf_field(); ?>
-
-                                                        <input type="hidden" name="_method" value="DELETE">
-
-                                                        <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" onclick="return confirm('Apakah Anda Yakin ?');"><i class="fas fa-edit fa-sm text-white-50"></i> Hapus</a> </button>
-
-                                                    </form>
                                                 </div>
                                             </td>
                                         </tr>

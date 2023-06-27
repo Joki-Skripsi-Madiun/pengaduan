@@ -97,38 +97,38 @@
         </tr>
         <tr>
 
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">NIP/Sifat</td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Sifat</td>
             <td>:</td>
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Segera</td>
             <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp;Yth. Orang Tua Siswa Kelas VI A </td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp;Yth. Orang Tua Siswa <?= $joinsiswa[0]['nama_siswa']; ?> </td>
 
         </tr>
         <tr>
 
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Hal</td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Undangan</td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Panggilan Orang Tua</td>
             <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp;di-
-                TEMPAT</td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp;Kelas <?= $joinsiswa[0]['nama_kelas']; ?></td>
 
         </tr>
-        <!-- <tr>
+        <tr>
 
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Hal</td>
-            <td>:</td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"></td>
+            <td></td>
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"></td>
             <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp;
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; di-
+                TEMPAT
             </td>
 
 
-        </tr> -->
+        </tr>
 
     </table>
     <br>
-    <div style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mengharap dengan hormat kehadiran Bapak / Ibu / Saudara orang tua / Wali Murid besok pada :</div>
+    <div style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mengharap dengan hormat kehadiran Bapak / Ibu / Saudara orang tua / Wali Murid <?= $joinsiswa[0]['nama_siswa']; ?> besok pada :</div>
 
     <table width='80%' align="center">
 
@@ -136,7 +136,7 @@
 
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> Hari, Tanggal </td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Tanah Longsor </td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> </td>
 
         </tr>
         <tr>
@@ -157,14 +157,14 @@
 
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Tempat</td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"></td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">SMP Negeri 2 Nglames</td>
 
         </tr>
 
 
     </table>
     <br>
-    <div style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Demikian surat undangan ini di buat untuk dipenuhi, atas perhatian dan kerjasamanya di sampaikan terima kasih</div>
+    <div style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Demikian surat undangan ini di buat untuk dipenuhi, atas perhatian dan kerjasamanya di sampaikan&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; terima kasih</div>
     <br><br>
     <table width='100%'>
         <tr>

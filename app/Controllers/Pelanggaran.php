@@ -14,6 +14,7 @@ class Pelanggaran extends BaseController
             'session' => $session,
             'siswa' => $this->siswaModel->getsiswa(),
             'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
+            'joinjenis' => $this->jenisModel->joinjenis(),
             'jenis' => $this->jenisModel->getjenis(),
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
