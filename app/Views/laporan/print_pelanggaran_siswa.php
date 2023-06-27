@@ -150,7 +150,7 @@
 
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Acara</td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"></td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Panggilan Orang Tua</td>
 
         </tr>
         <tr>
