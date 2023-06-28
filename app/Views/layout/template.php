@@ -14,6 +14,7 @@
   <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -98,8 +99,10 @@
   <div class="py-6 px-6 text-center">
     <p class="mb-0 fs-4">Design and Developed by SMP N 2 NGLAMES </p>
   </div>
+
   <?= $this->renderSection('div-modal'); ?>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
   <script type="text/javascript">
     $(document).ready(function() {
       $('ul li').click(function() {
@@ -108,7 +111,7 @@
       });
     });
   </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
   <script>
@@ -120,7 +123,7 @@
   <script src="<?= base_url(); ?>/web/libs/jquery/dist/jquery.min.js"></script>
   <script src="<?= base_url(); ?>/web/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
   <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap5.min.js"></script>
   <script src="<?= base_url(); ?>/web/js/sidebarmenu.js"></script>
@@ -128,7 +131,9 @@
   <script src="<?= base_url(); ?>/web/libs/apexcharts/dist/apexcharts.min.js"></script>
   <script src="<?= base_url(); ?>/web/libs/simplebar/dist/simplebar.js"></script>
   <script src="<?= base_url(); ?>/web/js/dashboard.js"></script>
+
   <?= $this->renderSection('script-js'); ?>
+
 </body>
 
 </html>

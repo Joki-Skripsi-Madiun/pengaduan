@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\JenisModel;
 
 class Pelanggaran extends BaseController
 {
@@ -15,6 +16,7 @@ class Pelanggaran extends BaseController
             'siswa' => $this->siswaModel->getsiswa(),
             'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
             'joinjenis' => $this->jenisModel->joinjenis(),
+            'kategori' => $this->kategoriModel->getKategori(),
             'jenis' => $this->jenisModel->getjenis(),
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
@@ -202,11 +204,21 @@ class Pelanggaran extends BaseController
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran($id_pelanggaran),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
             'kelas' => $this->kelasModel->getkelas(),
-
-
-
-
         ];
         return view('pelanggaran/view', $data);
+    }
+
+    public function getJenis()
+    {
+        $id_kategori = $this->request->getVar('id_kategori');
+
+        $jenises = $this->jenisModel->where('id_kategori', $id_kategori)->findAll();
+
+        $output = '<option value="">Pilih Jenis</option>';
+        foreach ($jenises as $jenis) {
+            $output .= '<option value="' . $jenis['id_jenis'] . '">' . $jenis['nama_jenis'] . '</option>';
+        }
+
+        echo json_encode($output);
     }
 }

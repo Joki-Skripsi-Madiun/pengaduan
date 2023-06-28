@@ -18,7 +18,7 @@
                  </li>
 
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>/dashboard" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>dashboard" aria-expanded="false">
                          <span>
                              <i class="ti ti-layout-dashboard"></i>
                          </span>
@@ -26,7 +26,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>/landing" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>landing" aria-expanded="false">
                          <span>
                              <i class="ti ti-aperture"></i>
                          </span>
@@ -38,7 +38,7 @@
                      <span class="hide-menu">Master</span>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="/siswa" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>siswa" aria-expanded="false">
                          <span>
                              <i class="ti ti-user"></i>
                          </span>
@@ -46,7 +46,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="/kelas" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>kelas" aria-expanded="false">
                          <span>
                              <i class="ti ti-book-2"></i>
                          </span>
@@ -54,7 +54,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="/data-akun" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>data-akun" aria-expanded="false">
                          <span>
                              <i class="ti ti-users"></i>
                          </span>
@@ -90,7 +90,7 @@
                      <span class="hide-menu">Pelanggaran</span>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>/kategori" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>kategori" aria-expanded="false">
                          <span>
                              <i class="ti ti-user-minus"></i>
                          </span>
@@ -98,7 +98,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>/jenis" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>jenis" aria-expanded="false">
                          <span>
                              <i class="ti ti-user-plus"></i>
                          </span>
@@ -106,7 +106,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="/pelanggaran" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>pelanggaran" aria-expanded="false">
                          <span>
                              <i class="ti ti-user-x"></i>
                          </span>
@@ -118,7 +118,7 @@
                      <span class="hide-menu">Prestasi</span>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="/prestasi" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>prestasi" aria-expanded="false">
                          <span>
                              <i class="ti ti-device-analytics"></i>
                          </span>
@@ -130,7 +130,7 @@
                      <span class="hide-menu">Laporan</span>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>/laporan" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>laporan" aria-expanded="false">
                          <span>
                              <i class="ti ti-files"></i>
                          </span>
@@ -138,7 +138,7 @@
                      </a>
                  </li>
                  <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>/laporan/prestasi" aria-expanded="false">
+                     <a class="sidebar-link" href="<?= base_url(); ?>laporan/prestasi" aria-expanded="false">
                          <span>
                              <i class="ti ti-file"></i>
                          </span>
