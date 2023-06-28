@@ -34,6 +34,15 @@
                                 </select>
                             </div>
                             <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Jenis Pelanggaran</label>
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_jenis">
+                                    <option selected>Open this select menu</option>
+                                    <?php foreach ($joinjenis as $k) : ?>
+                                        <option value="<?= $k['id_jenis'] ?>"><?= $k['nama_kategori'] ?>-<?= $k['nama_jenis'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Pelapor</label>
                                 <input type="text" class="form-control" name="pelapor" id="exampleInputEmail1" aria-describedby="emailHelp">
 
