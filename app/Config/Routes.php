@@ -129,11 +129,16 @@ $routes->post('landing/update', 'Landing::update', ['filter' => 'auth']);
 
 $routes->get('laporan', 'Laporan::index', ['filter' => 'auth']);
 $routes->get('laporan/prestasi', 'Laporan::prestasi', ['filter' => 'auth']);
+$routes->get('laporan/prestasi/tingkat/print', 'Laporan::prestasi', ['filter' => 'auth']);
+$routes->post('laporan/prestasi/tingkat/print', 'Laporan::printPrestasiTingkat', ['filter' => 'auth']);
 
 $routes->get('laporan/prestasi/print', 'Laporan::printPrestasi', ['filter' => 'auth']);
 $routes->get('laporan/pelanggaran/detail/print/(:num)', 'Laporan::printPelanggaranDetail/$1', ['filter' => 'auth']);
 $routes->get('laporan/pelanggaran/print', 'Laporan::printPelanggaran', ['filter' => 'auth']);
-$routes->get('laporan/pelanggaran/print/(:num)', 'Laporan::printPelanggaranSiswa/$1', ['filter' => 'auth']);
+$routes->get('laporan/pelanggaran/sp/print/(:num)', 'Laporan::printPelanggaranSP/$1', ['filter' => 'auth']);
+$routes->get('laporan/pelanggaran/individu/print/(:num)', 'Laporan::printPelanggaranSiswa/$1', ['filter' => 'auth']);
+$routes->post('import-data/import', 'Siswa::import');
+
 
 
 // Login Register

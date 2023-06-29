@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\SiswaModel;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 
 class Siswa extends BaseController
 {
@@ -199,5 +201,38 @@ class Siswa extends BaseController
         $this->siswaModel->delete($id_siswa);
         session()->setFlashdata('pesan', 'Data siswa Berhasil Dihapus.');
         return redirect()->to('/siswa');
+    }
+
+    public function import()
+    {
+        $file = $this->request->getFile('excel_file');
+
+        if ($file->isValid() && $file->getExtension() == 'xlsx') {
+            $spreadsheet = IOFactory::load($file->getTempName());
+            $worksheet = $spreadsheet->getActiveSheet();
+            $rows = $worksheet->toArray();
+
+            // Mulai dari baris kedua untuk menghindari header
+            for ($i = 1; $i < count($rows); $i++) {
+                $data = [
+                    'nama_siswa' => $rows[$i][0],
+                    'id_kelas' => $rows[$i][1],
+                    'no_induk' => $rows[$i][2],
+                    'jenis_kelamin' => $rows[$i][3],
+                    'tgl_lahir' => $rows[$i][4],
+                    'alamat' => $rows[$i][5],
+                    // Tambahkan kolom-kolom lainnya sesuai dengan struktur tabel Anda
+                ];
+
+                // Simpan data ke database
+                // Ubah "nama_tabel" dengan nama tabel yang sesuai di database Anda
+                // dd($data);
+                $this->siswaModel->save($data);
+            }
+
+            return redirect()->to('/siswa')->with('success', 'Data imported successfully.');
+        } else {
+            return redirect()->to('/siswa')->with('error', 'Invalid file format.');
+        }
     }
 }

@@ -10,14 +10,13 @@
                         <h5 class="card-title fw-semibold mb-4">Data Prestasi</h5>
                         <div class="row">
                             <div class="col-2">
-                                <form action="#" method="post">
-                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_kelas">
+                                <form action="/laporan/prestasi/tingkat/print" method="post">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="tingkat_prestasi">
                                         <option selected>Pilih Tingkatan</option>
                                         <option value="Kabupaten/Kota">Kabupaten/Kota</option>
                                         <option value="Provinsi">Provinsi</option>
                                         <option value="Nasional">Nasional</option>
                                         <option value="Internasional">Internasional</option>
-
                                     </select>
                             </div>
                             <div class="col-3"><button type="submit" class="btn btn-primary">Pilih</button>

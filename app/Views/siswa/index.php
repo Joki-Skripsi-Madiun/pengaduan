@@ -8,6 +8,18 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title fw-semibold mb-4">Siswa</h5>
+                        <?php if (session('success')) : ?>
+                            <div><?= session('success') ?></div>
+                        <?php endif; ?>
+
+                        <?php if (session('error')) : ?>
+                            <div><?= session('error') ?></div>
+                        <?php endif; ?>
+
+                        <form method="post" enctype="multipart/form-data" action="<?= site_url('import-data/import') ?>">
+                            <input type="file" name="excel_file" required>
+                            <button type="submit">Import</button>
+                        </form>
                         <hr>
                         <form class="row g-3" action="/siswa/save" method="post" enctype="multipart/form-data">
                             <div class="mb-3">
@@ -20,7 +32,7 @@
                                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_kelas">
                                     <option selected>Open this select menu</option>
                                     <?php foreach ($kelas as $k) : ?>
-                                        <option value="<?= $k['id_kelas'] ?>"><?= $k['nama_kelas'] ?></option>
+                                        <option value="<?= $k['nama_kelas'] ?>"><?= $k['nama_kelas'] ?></option>
                                     <?php endforeach ?>
                                 </select>
                             </div>

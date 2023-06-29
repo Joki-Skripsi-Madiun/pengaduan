@@ -49,31 +49,7 @@
                                     }
                                     ?>
                                 </tbody>
-                                <!-- <tbody>
-                                    <?php foreach ($joinpelanggaran as $u) : ?>
-                                        <tr>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-0">1</h6>
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['nama_siswa'] ?></h6>
 
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['nama_jenis'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['bobot'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-
-                                            </td>
-                                        </tr>
-                                    <?php endforeach ?>
-
-                                </tbody> -->
                             </table>
                         </div>
                     </div>
