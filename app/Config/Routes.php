@@ -136,6 +136,8 @@ $routes->get('laporan/prestasi/print', 'Laporan::printPrestasi', ['filter' => 'a
 $routes->get('laporan/pelanggaran/detail/print/(:num)', 'Laporan::printPelanggaranDetail/$1', ['filter' => 'auth']);
 $routes->get('laporan/pelanggaran/print', 'Laporan::printPelanggaran', ['filter' => 'auth']);
 $routes->get('laporan/pelanggaran/sp/print/(:num)', 'Laporan::printPelanggaranSP/$1', ['filter' => 'auth']);
+$routes->post('laporan/pelanggaran/sp/print/(:num)', 'Laporan::printPelanggaranSP/$1', ['filter' => 'auth']);
+$routes->get('laporan/pelanggaran/sp/tanggal/(:num)', 'Laporan::tanggalPelanggaranSP/$1', ['filter' => 'auth']);
 $routes->get('laporan/pelanggaran/individu/print/(:num)', 'Laporan::printPelanggaranSiswa/$1', ['filter' => 'auth']);
 $routes->post('import-data/import', 'Siswa::import');
 

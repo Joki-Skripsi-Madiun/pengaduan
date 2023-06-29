@@ -79,7 +79,7 @@ class PelanggaranModel extends Model
     {
         $db      = \Config\Database::connect();
         $builder = $db->table('pelanggaran');
-        $builder->select('*');
+        $builder->select('*, pelanggaran.id_siswa AS siswa_id');
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');

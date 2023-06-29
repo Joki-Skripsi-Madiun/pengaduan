@@ -77,7 +77,7 @@
         </tr>
     </table>
     <hr class="new4">
-    <p align="right" style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Madiun, </p>
+    <p align="right" style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Madiun, <?= date_indo(date('Y-m-d')) ?></p>
     <table width='100%'>
 
         <tr>
@@ -131,14 +131,16 @@
 
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> Hari, Tanggal </td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> </td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">
+                <?= date_indo(date('Y-m-d', strtotime($tanggal))); ?>
+            </td>
 
         </tr>
         <tr>
 
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Waktu</td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif; width:100px">Waktu</td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Dsn. Golang Ds. Kuwiran RT 06 RW 02 Kec. Kare</td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;"> <?= date('H:i', strtotime($tanggal)); ?> WIB</td>
 
         </tr>
         <tr>
