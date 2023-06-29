@@ -63,6 +63,12 @@ class Landing extends BaseController
                     'required' => 'Website Harus diisi',
                 ]
             ],
+            'kkm_bobot' => [
+                'rules' => 'required',
+                'errors' => [
+                    'required' => 'Bobot KKM Harus diisi',
+                ]
+            ],
             'logo' => [
                 'rules' => 'is_image[logo]|mime_in[logo,image/jpg,image/jpeg,image/gif,image/png]|max_size[logo,2048]',
                 'errors' => [
@@ -100,6 +106,7 @@ class Landing extends BaseController
             'alamat_sekolah' => $this->request->getVar('alamat_sekolah'),
             'tlp_sekolah' => $this->request->getVar('tlp_sekolah'),
             'website_sekolah' => $this->request->getVar('website_sekolah'),
+            'kkm_bobot' => $this->request->getVar('kkm_bobot'),
             'logo' => $namaFoto
 
         ]);

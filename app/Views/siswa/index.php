@@ -17,8 +17,9 @@
                         <?php endif; ?>
 
                         <form method="post" enctype="multipart/form-data" action="<?= site_url('import-data/import') ?>">
-                            <input type="file" name="excel_file" required>
-                            <button type="submit">Import</button>
+
+                            <input class="form-control" type="file" name="excel_file" required>
+                            <button class="badge bg-warning rounded-2 fw-semibold" type="submit">Import</button>
                         </form>
                         <hr>
                         <form class="row g-3" action="/siswa/save" method="post" enctype="multipart/form-data">

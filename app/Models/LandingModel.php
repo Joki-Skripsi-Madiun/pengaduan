@@ -8,7 +8,7 @@ class LandingModel extends Model
 {
     protected $table      = 'setting';
     protected $primaryKey = 'id_setting';
-    protected $allowedFields = ['id_setting','judul_setting','keterangan_setting','alamat_sekolah','tlp_sekolah','website_sekolah','logo'];
+    protected $allowedFields = ['id_setting', 'judul_setting', 'keterangan_setting', 'alamat_sekolah', 'tlp_sekolah', 'website_sekolah', 'logo', 'kkm_bobot'];
     // protected $useTimestamps = true;
 
 
@@ -19,7 +19,7 @@ class LandingModel extends Model
         }
         return $this->where(['id_setting' => $id_setting])->first();
     }
-    
+
     // public function joinMobil($id_akun = false)
     // {
     //     if ($id_akun == false) {
@@ -33,6 +33,6 @@ class LandingModel extends Model
     //     return $this->where(['id_akun' => $id_akun])->first();
     // }
 
-  
- 
+
+
 }

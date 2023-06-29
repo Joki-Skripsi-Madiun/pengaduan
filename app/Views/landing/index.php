@@ -29,6 +29,10 @@
                 <label for="exampleInputKeterangan1" class="form-label">Website Sekolah</label>
                 <input type="text" class="form-control" name="website_sekolah" id="exampleInputKeterangan1" value="<?= (old('website_sekolah') ? old('website_sekolah') : $landing['website_sekolah']); ?>">
               </div>
+              <div class="mb-3">
+                <label for="exampleInputKeterangan1" class="form-label">Bobot Pelanggaran</label>
+                <input type="text" class="form-control" name="kkm_bobot" id="exampleInputKeterangan1" value="<?= (old('kkm_bobot') ? old('kkm_bobot') : $landing['kkm_bobot']); ?>">
+              </div>
 
               <label for="floatingInput">Photo</label>
 
