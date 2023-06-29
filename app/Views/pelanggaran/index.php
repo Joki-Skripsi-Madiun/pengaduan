@@ -25,12 +25,19 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Jenis Pelanggaran</label>
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_jenis">
+                                <label for="exampleInputEmail1" class="form-label">Kategori Pelanggaran</label>
+                                <select class="form-select" id="kategori" name="id_kategori">
                                     <option selected>Open this select menu</option>
-                                    <?php foreach ($joinjenis as $k) : ?>
-                                        <option value="<?= $k['id_jenis'] ?>"><?= $k['nama_kategori'] ?>-<?= $k['nama_jenis'] ?></option>
+                                    <?php foreach ($kategori as $r) : ?>
+                                        <option value="<?= $r['id_kategori'] ?>"><?= $r['nama_kategori'] ?></option>
                                     <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Jenis Pelanggaran</label>
+                                <select class="form-select" id="jenis" name="id_jenis">
+
+
                                 </select>
                             </div>
                             <div class="mb-3">
@@ -131,5 +138,27 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        $('#kategori').on('change', function() {
+            var id_kategori = $(this).val();
+            if (id_kategori != '') {
+                $.ajax({
+                    url: "<?php echo base_url('getJenis'); ?>",
+                    method: "POST",
+                    data: {
+                        id_kategori: id_kategori
+                    },
+                    dataType: "json",
+                    success: function(data) {
+                        $('#jenis').html(data);
+                    }
+                });
+            } else {
+                $('#jenis').html('<option value="">Pilih Jenis</option>');
+            }
+        });
+    });
+</script>
 
 <?= $this->endSection(); ?>

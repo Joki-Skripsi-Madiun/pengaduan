@@ -25,14 +25,14 @@ class SiswaModel extends Model
             $db      = \Config\Database::connect();
             $builder = $db->table('siswa');
             $builder->select('*');
-            $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
+            $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
             $query = $builder->get();
             return $query->getResultArray();
         }
         $db      = \Config\Database::connect();
         $builder = $db->table('siswa');
         $builder->select('*');
-        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->where('id_siswa', $id_siswa);
         $query = $builder->get();
         return $query->getResultArray();

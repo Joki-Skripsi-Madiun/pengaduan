@@ -23,7 +23,7 @@ class Laporan extends BaseController
         foreach ($data['siswa'] as $row) {
             $dataRow['no'] = $no++;
             $dataRow['jumlahBobot'] = $this->pelanggaranModel->joinPelanggaranSumBobot($row['id_siswa']);
-            $dataRow['kelas'] = $this->kelasModel->where('id_kelas', $row['id_kelas'])->findAll();
+            $dataRow['kelas'] = $this->kelasModel->where('nama_kelas', $row['id_kelas'])->findAll();
             $dataRow['row'] = $row;
             $data['row' . $row['id_siswa']] = view('laporan/row', $dataRow);
         }
@@ -59,6 +59,22 @@ class Laporan extends BaseController
         return view('laporan/print_prestasi', $data);
     }
 
+    public function printPrestasiTingkat()
+    {
+        //include helper form
+        helper(['form']);
+        $tingkat = $this->request->getVar('tingkat_prestasi');
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'prestasi' => $this->prestasiModel->getprestasi(),
+            'joinprestasi' => $this->prestasiModel->joinPrestasiTingkat($tingkat),
+
+        ];
+        return view('laporan/print_prestasi', $data);
+    }
+
     public function printPelanggaran()
     {
         //include helper form
@@ -76,7 +92,8 @@ class Laporan extends BaseController
 
         return view('laporan/print_pelanggaran', $data);
     }
-    public function printPelanggaranSiswa()
+
+    public function printPelanggaranDetail($id_siswa)
     {
         //include helper form
         helper(['form']);
@@ -84,21 +101,47 @@ class Laporan extends BaseController
         $data = [
             'session' => $session,
             'siswa' => $this->siswaModel->getsiswa(),
-            'pelanggaran' => $this->pelanggaranModel->getpelanggaran(),
+            'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
             'jenis' => $this->jenisModel->getjenis(),
-            'joinprestasi' => $this->prestasiModel->joinprestasi(),
-            'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
+            'joinpelanggaran' => $this->pelanggaranModel->joinPelanggaranSiswa($id_siswa),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
 
         ];
-        $no = 1;
-        foreach ($data['siswa'] as $row) {
-            $dataRow['no'] = $no++;
-            $dataRow['jumlahBobot'] = $this->pelanggaranModel->joinPelanggaranSumBobot($row['id_siswa']);
-            $dataRow['kelas'] = $this->kelasModel->where('id_kelas', $row['id_kelas'])->findAll();
-            $dataRow['row'] = $row;
-            $data['row' . $row['id_siswa']] = view('laporan/row', $dataRow);
-        }
+
+        return view('laporan/print_pelanggaran_siswa', $data);
+    }
+
+    public function printPelanggaranSP($id_siswa)
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
+            'jenis' => $this->jenisModel->getjenis(),
+            'joinpelanggaran' => $this->pelanggaranModel->joinPelanggaranSiswa($id_siswa),
+            'joinsiswa' => $this->siswaModel->joinsiswa(),
+
+        ];
+
+        return view('laporan/print_pelanggaran_sp', $data);
+    }
+    public function printPelanggaranSiswa($id_siswa)
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
+            'jenis' => $this->jenisModel->getjenis(),
+            'joinpelanggaran' => $this->pelanggaranModel->joinPelanggaranSiswa($id_siswa),
+            'joinsiswa' => $this->siswaModel->joinsiswa(),
+
+        ];
         return view('laporan/print_pelanggaran_siswa', $data);
     }
 }

@@ -16,7 +16,7 @@
             Cetak Laporan Individu
         </a>
         <?php if ($jumlahBobot >= 100) { ?>
-            <a href="<?= base_url(); ?>/laporan/pelanggaran/print/<?= $row['id_siswa']; ?>" class="btn btn-danger btn-circle btn-sm" title="Ubah Password">
+            <a href="<?= base_url(); ?>/laporan/pelanggaran/sp/print/<?= $row['id_siswa']; ?>" class="btn btn-danger btn-circle btn-sm" title="Ubah Password">
                 Cetak Surat Peringatan
             </a>
         <?php } ?>
