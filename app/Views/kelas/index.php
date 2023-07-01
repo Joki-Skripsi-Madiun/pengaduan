@@ -55,7 +55,7 @@
                                             <h6 class="fw-semibold mb-0">Id</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Nama Kelas</h6>
+                                            <h6 class="fw-semibold mb-0">Kelas</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Wali Kelas</h6>
@@ -64,7 +64,7 @@
                                             <h6 class="fw-semibold mb-0">NIP Kelas</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Jenis Kelamin</h6>
+                                            <h6 class="fw-semibold mb-0">Jumlah Siswa</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Aksi</h6>
@@ -74,45 +74,11 @@
                                 <tbody>
                                     <?php
                                     $no = 1;
-                                    foreach ($kelas as $u) : ?>
-                                        <tr>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['nama_kelas'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['wali_kelas'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['nip'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <h6 class="fw-semibold mb-1"><?= $u['jk_wali'] ?></h6>
-
-                                            </td>
-                                            <td class="border-bottom-0">
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/kelas/edit/<?= $u['id_kelas'] ?>">
-                                                        Edit</a>
-                                                    <form action="<?= base_url(); ?>/kelas/<?= $u['id_kelas']; ?>" method="post" class="d-inline">
-
-                                                        <?= csrf_field(); ?>
-
-                                                        <input type="hidden" name="_method" value="DELETE">
-
-                                                        <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" onclick="return confirm('Apakah Anda Yakin ?');"><i class="fas fa-edit fa-sm text-white-50"></i> Hapus</a> </button>
-
-                                                    </form>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach ?>
-
+                                    foreach ($kelas as $rw) {
+                                        $row = "row" . $rw['id_kelas'];
+                                        echo $$row;
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>

@@ -13,8 +13,15 @@ class Kelas extends BaseController
         $data = [
             'session' => $session,
             'kelas' => $this->kelasModel->getkelas(),
-
         ];
+        $no = 1;
+        foreach ($data['kelas'] as $row) {
+            $dataRow['no'] = $no++;
+            $dataRow['setting'] = $this->landingModel->getlanding(1);
+            $dataRow['jumlahKelas'] = $this->siswaModel->hitungJumlahSiswaKelas($row['nama_kelas']);
+            $dataRow['row'] = $row;
+            $data['row' . $row['id_kelas']] = view('kelas/row', $dataRow);
+        }
         return view('kelas/index', $data);
     }
 

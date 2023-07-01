@@ -88,17 +88,17 @@
 
 
 
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+    <div class="py-6 px-6 text-center">
+      <p class="fs-4">Design and Developed by SMP N 2 NGLAMES </p>
+    </div>
   </div>
   <!-- End of Content Wrapper -->
 
 
   <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-  <div class="py-6 px-6 text-center">
-    <p class="mb-0 fs-4">Design and Developed by SMP N 2 NGLAMES </p>
-  </div>
 
   <?= $this->renderSection('div-modal'); ?>
 

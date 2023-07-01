@@ -235,4 +235,9 @@ class Siswa extends BaseController
             return redirect()->to('/siswa')->with('error', 'Invalid file format.');
         }
     }
+    public function download()
+    {
+        $file = 'import_siswa.xlsx';
+        return $this->response->download('assets/' . $file, null);
+    }
 }

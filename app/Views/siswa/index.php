@@ -7,7 +7,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Siswa</h5>
+                        <h5 class="card-title fw-semibold mb-4">Siswa <a href="<?= base_url() ?>siswa/template/download"> Download Template Excel</a></h5>
                         <?php if (session('success')) : ?>
                             <div><?= session('success') ?></div>
                         <?php endif; ?>
@@ -17,9 +17,15 @@
                         <?php endif; ?>
 
                         <form method="post" enctype="multipart/form-data" action="<?= site_url('import-data/import') ?>">
+                            <div class="row">
+                                <div class="col-8">
+                                    <input class="form-control form-sm" type="file" name="excel_file" required>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn bg-warning rounded-2 fw-semibold" type="submit">Import</button>
+                                </div>
+                            </div>
 
-                            <input class="form-control" type="file" name="excel_file" required>
-                            <button class="badge bg-warning rounded-2 fw-semibold" type="submit">Import</button>
                         </form>
                         <hr>
                         <form class="row g-3" action="/siswa/save" method="post" enctype="multipart/form-data">

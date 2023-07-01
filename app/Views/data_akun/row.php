@@ -1,5 +1,5 @@
 <tr>
-    <td><?= $row->id; ?></td>
+    <td><?= $no; ?></td>
     <td><?= $row->fullname; ?></td>
     <td><?= $group[0]['name']; ?></td>
     <td align="center">

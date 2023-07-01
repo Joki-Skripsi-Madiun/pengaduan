@@ -103,6 +103,7 @@ $routes->get('siswa/edit/(:num)', 'Siswa::edit/$1', ['filter' => 'auth']);
 $routes->get('siswa/detail/(:num)', 'Siswa::detail/$1', ['filter' => 'auth']);
 $routes->post('siswa/update/(:num)', 'Siswa::update/$1', ['filter' => 'auth']);
 $routes->delete('siswa/(:num)', 'Siswa::delete/$1', ['filter' => 'auth']);
+$routes->get('siswa/template/download', 'Siswa::download', ['filter' => 'auth']);
 
 // Prestasi
 $routes->get('prestasi', 'Prestasi::index', ['filter' => 'auth']);
@@ -140,6 +141,7 @@ $routes->post('laporan/pelanggaran/sp/print/(:num)', 'Laporan::printPelanggaranS
 $routes->get('laporan/pelanggaran/sp/tanggal/(:num)', 'Laporan::tanggalPelanggaranSP/$1', ['filter' => 'auth']);
 $routes->get('laporan/pelanggaran/individu/print/(:num)', 'Laporan::printPelanggaranSiswa/$1', ['filter' => 'auth']);
 $routes->post('import-data/import', 'Siswa::import');
+
 
 
 

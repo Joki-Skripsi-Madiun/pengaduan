@@ -29,8 +29,9 @@ class DataAkun extends BaseController
         $data['users'] = $userModel->findAll();
 
         $groupModel = new GroupModel();
-
+        $no = 1;
         foreach ($data['users'] as $row) {
+            $dataRow['no'] = $no++;
             $dataRow['group'] = $groupModel->getGroupsForUser($row->id);
             $dataRow['row'] = $row;
             $data['row' . $row->id] = view('data_akun/row', $dataRow);

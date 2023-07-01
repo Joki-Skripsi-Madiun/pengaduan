@@ -26,6 +26,7 @@ class SiswaModel extends Model
             $builder = $db->table('siswa');
             $builder->select('*');
             $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+            $builder->orderBy('siswa.id_siswa', 'ASC');
             $query = $builder->get();
             return $query->getResultArray();
         }
@@ -34,6 +35,7 @@ class SiswaModel extends Model
         $builder->select('*');
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->where('id_siswa', $id_siswa);
+        $builder->orderBy('siswa.id_siswa', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -53,6 +55,16 @@ class SiswaModel extends Model
         $db = \Config\Database::connect();
         $query = $db->table('siswa');
         $query->selectCount('id_siswa');
+        $result = $query->countAllResults();
+        return $result;
+    }
+
+    public function hitungJumlahSiswaKelas($kelas)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('siswa');
+        $query->selectCount('id_siswa');
+        $query->where('id_kelas', $kelas);
         $result = $query->countAllResults();
         return $result;
     }
