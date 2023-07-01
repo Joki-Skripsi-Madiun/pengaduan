@@ -66,9 +66,9 @@ class Laporan extends BaseController
         $session = session();
         $data = [
             'session' => $session,
-            'siswa' => $this->siswaModel->getsiswa($id_siswa),
+            'siswa' => $this->siswaModel->getsiswa(),
             'prestasi' => $this->prestasiModel->getprestasi(),
-            'joinprestasi' => $this->prestasiModel->joinprestasi(),
+            'joinprestasi' => $this->prestasiModel->joinprestasi($id_siswa),
 
         ];
         return view('laporan/cetak_prestasi', $data);
