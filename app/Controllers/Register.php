@@ -28,7 +28,6 @@ class Register extends Controller
             'no_hp'         => 'required',
             'email'         => 'required',
             'username'      => 'required|min_length[6]|max_length[50]|is_unique[tb_users.username]',
-            'role'          => 'required',
             'password'      => 'required|min_length[6]|max_length[200]',
             'confpassword'  => 'matches[password]'
         ];

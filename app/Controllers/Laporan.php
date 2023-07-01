@@ -59,6 +59,20 @@ class Laporan extends BaseController
         ];
         return view('laporan/print_prestasi', $data);
     }
+    public function cetak_prestasi($id_siswa)
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa($id_siswa),
+            'prestasi' => $this->prestasiModel->getprestasi(),
+            'joinprestasi' => $this->prestasiModel->joinprestasi(),
+
+        ];
+        return view('laporan/cetak_prestasi', $data);
+    }
 
     public function printPrestasiTingkat()
     {

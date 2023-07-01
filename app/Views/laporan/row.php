@@ -15,7 +15,7 @@
         <a href="<?= base_url(); ?>/laporan/pelanggaran/individu/print/<?= $row['id_siswa']; ?>" class="btn btn-warning btn-circle btn-sm">
             Cetak Laporan Individu
         </a>
-        <?php if ($jumlahBobot >= 100) { ?>
+        <?php if ($jumlahBobot >= $setting['kkm_bobot']) { ?>
             <a href="<?= base_url(); ?>/laporan/pelanggaran/sp/tanggal/<?= $row['id_siswa']; ?>" class="btn btn-danger btn-circle btn-sm" title="Ubah Password">
                 Cetak Surat Peringatan
             </a>
