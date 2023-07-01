@@ -518,4 +518,20 @@ INFO - 2023-07-01 13:53:11 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-07-01 13:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 =======
  7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+<<<<<<< HEAD
 >>>>>>> 07b7dc99c4ec19bd6c0e8aeed05a2e68db414dba
+=======
+INFO - 2023-07-01 13:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 13:55:22 --> Attempt to read property "id" on null
+in VENDORPATH\myth\auth\src\Models\UserModel.php on line 78.
+ 1 VENDORPATH\myth\auth\src\Models\UserModel.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on null', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\vendor\\myth\\auth\\src\\Models\\UserModel.php', 78)
+ 2 VENDORPATH\myth\auth\src\Controllers\AuthController.php(176): Myth\Auth\Models\UserModel->withGroup('user')
+ 3 SYSTEMPATH\CodeIgniter.php(932): Myth\Auth\Controllers\AuthController->attemptRegister()
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(Myth\Auth\Controllers\AuthController))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 13:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 13:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 13:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+>>>>>>> 29a44cc8b4fb4b24bbb506af9bfa7d14d2ce5628
