@@ -1,9 +1,24 @@
 <tr>
-    <td><?= $no; ?></td>
-    <td><?= $row['nama_kelas']; ?></td>
-    <td><?= $row['wali_kelas']; ?> (<?= $row['jk_wali']; ?>)</td>
-    <td><?= $row['nip']; ?></td>
-    <td><?= $jumlahKelas ?></td>
+    <td class="border-bottom-0">
+        <h6 class="fw-semibold mb-1"><?= $no; ?>
+        </h6>
+    </td>
+    <td class="border-bottom-0">
+        <h6 class="fw-semibold mb-1"><?= $row['nama_kelas']; ?>
+        </h6>
+    </td>
+    <td class="border-bottom-0">
+        <h6 class="fw-semibold mb-1"><?= $row['wali_kelas']; ?> (<?= $row['jk_wali']; ?>)
+        </h6>
+    </td>
+    <td class="border-bottom-0">
+        <h6 class="fw-semibold mb-1"><?= $row['nip']; ?>
+        </h6>
+    </td>
+    <td class="border-bottom-0">
+        <h6 class="fw-semibold mb-1"><?= $jumlahKelas ?>
+        </h6>
+    </td>
     <td class="border-bottom-0">
         <div class="d-flex align-items-center gap-2">
             <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/kelas/edit/<?= $row['id_kelas'] ?>">
