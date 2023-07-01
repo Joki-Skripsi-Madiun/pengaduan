@@ -1,0 +1,197 @@
+INFO - 2023-07-01 04:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-01 04:13:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'pelanggaran', 3306, '', 0)
+#1 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\app\Models\LandingModel.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\app\Controllers\Landing.php(121): App\Models\LandingModel->getLanding()
+#8 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Landing->web()
+#9 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#10 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\app\Models\LandingModel.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\app\Controllers\Landing.php(121): App\Models\LandingModel->getLanding()
+#7 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(932): App\Controllers\Landing->web()
+#8 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+#9 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\wulan\Downloads\pelanggaran-main\pengaduan\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\...')
+#12 {main}
+CRITICAL - 2023-07-01 04:13:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `setting`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\LandingModel.php(18): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Landing.php(121): App\Models\LandingModel->getLanding()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Landing->web()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Landing))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 04:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:15:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:15:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:17:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:18:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:18:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 04:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:10:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:11:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:11:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:11:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:12:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:13:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:18:04 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\edit.php on line 12.
+ 1 APPPATH\Views\pelanggaran\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/edit', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(115): view('pelanggaran/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->edit('6')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:18:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:18:14 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\edit.php on line 12.
+ 1 APPPATH\Views\pelanggaran\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/edit', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(115): view('pelanggaran/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->edit('6')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:18:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:18:25 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\view.php on line 15.
+ 1 APPPATH\Views\pelanggaran\view.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\view.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\view.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/view', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(208): view('pelanggaran/view', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->view('6')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:19:13 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\edit.php on line 12.
+ 1 APPPATH\Views\pelanggaran\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/edit', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(115): view('pelanggaran/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->edit('7')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:19:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:19:30 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\edit.php on line 12.
+ 1 APPPATH\Views\pelanggaran\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/edit', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(115): view('pelanggaran/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->edit('6')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:19:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:19:47 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\edit.php on line 12.
+ 1 APPPATH\Views\pelanggaran\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/edit', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(115): view('pelanggaran/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->edit('6')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-01 12:19:52 --> Undefined array key 0
+in APPPATH\Views\pelanggaran\edit.php on line 12.
+ 1 APPPATH\Views\pelanggaran\edit.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php', 12)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\app\\Views\\pelanggaran\\edit.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('pelanggaran/edit', [], true)
+ 5 APPPATH\Controllers\Pelanggaran.php(115): view('pelanggaran/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\Pelanggaran->edit('7')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pelanggaran))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\wulan\\Downloads\\pelanggaran-main\\pengaduan\\public\\index.php')
+INFO - 2023-07-01 12:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:20:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:21:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:21:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-01 12:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
