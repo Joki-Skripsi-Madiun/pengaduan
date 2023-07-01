@@ -65,7 +65,7 @@
                                             </td>
                                             <td class="border-bottom-0">
                                                 <div class="d-flex align-items-center gap-2">
-                                                    <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/prestasi/edit/<?= $u['id_prestasi'] ?>">
+                                                    <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/laporan/cetak_prestasi/<?= $u['id_prestasi'] ?>">
                                                         Cetak Prestasi</a>
 
                                                 </div>
