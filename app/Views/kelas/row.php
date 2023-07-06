@@ -8,7 +8,7 @@
         </h6>
     </td>
     <td class="border-bottom-0">
-        <h6 class="fw-semibold mb-1"><?= $row['wali_kelas']; ?> (<?= $row['jk_wali']; ?>)
+        <h6 class="fw-semibold mb-1"><?= $row['wali_kelas']; ?>
         </h6>
     </td>
     <td class="border-bottom-0">

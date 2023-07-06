@@ -19,8 +19,29 @@
                                     <option value="Internasional">Internasional</option>
                                 </select>
                         </div>
+<<<<<<< HEAD
                         <div class="col-2"><button type="submit" class="btn btn-primary">Pilih</button>
                             </form>
+=======
+                        <right></right>
+                        <br>
+                        <div class="table-responsive">
+                            <table id="data1" class="table table-avatar bg-grey text-black">
+                                <thead class="text-dark fs-4">
+                                    <tr>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">No</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Nama Siswa</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Jenis Prestasi</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Aksi</h6>
+                                        </th>
+>>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                         </div>
                         <div class="col-2">

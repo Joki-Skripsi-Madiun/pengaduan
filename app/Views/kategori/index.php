@@ -49,11 +49,23 @@
                                 $no = 1;
                                 foreach ($kategori as $u) : ?>
                                     <tr>
+<<<<<<< HEAD
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
                                         </td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?= $u['nama_kategori'] ?></h6>
+=======
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">No</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Kategori</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Aksi</h6>
+                                        </th>
+>>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                                         </td>
                                         <td class="border-bottom-0">

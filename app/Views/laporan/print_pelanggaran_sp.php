@@ -84,7 +84,7 @@
 
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">Nomor</td>
             <td>:</td>
-            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">360/ /402.302/2023 &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </td>
+            <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">005/ /402.107.116/<?= date('Y') ?> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </td>
             <td> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
             <td style="font-size: 15px; font-family:'Times New Roman', Times, serif;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Kepada</td>
 

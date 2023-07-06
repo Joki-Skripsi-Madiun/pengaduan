@@ -3,6 +3,7 @@
 <!--  Header End -->
 
 <div class="container-fluid">
+<<<<<<< HEAD
     <div class="row">
         <div class="col-4">
             <div class="card">
@@ -11,6 +12,17 @@
                     <?php if (session('success')) : ?>
                         <div><?= session('success') ?></div>
                     <?php endif; ?>
+=======
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Tambah Siswa <a href="<?= base_url() ?>siswa/template/download"> Download Template Excel</a></h5>
+                        <?php if (session('success')) : ?>
+                            <div><?= session('success') ?></div>
+                        <?php endif; ?>
+>>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                     <?php if (session('error')) : ?>
                         <div><?= session('error') ?></div>

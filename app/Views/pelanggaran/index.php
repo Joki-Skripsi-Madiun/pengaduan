@@ -3,6 +3,7 @@
 <!--  Header End -->
 
 <div class="container-fluid">
+<<<<<<< HEAD
     <div class="row">
         <div class="col-4">
             <div class="card">
@@ -36,6 +37,42 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Jenis Pelanggaran</label>
                             <select class="form-select" id="jenis" name="id_jenis">
+=======
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-4">Tambah Pelanggaran</h5>
+                        <hr>
+                        <form class="row g-3" action="/pelanggaran/save" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Tanggal</label>
+                                <input type="date" class="form-control" id="exampleInputEmail1" name="waktu" aria-describedby="emailHelp">
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Siswa</label>
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_siswa">
+                                    <option selected>Open this select menu</option>
+                                    <?php foreach ($siswa as $k) : ?>
+                                        <option value="<?= $k['id_siswa'] ?>"><?= $k['nama_siswa'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Kategori Pelanggaran</label>
+                                <select class="form-select" id="kategori" name="id_kategori">
+                                    <option selected>Open this select menu</option>
+                                    <?php foreach ($kategori as $r) : ?>
+                                        <option value="<?= $r['id_kategori'] ?>"><?= $r['nama_kategori'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Pelanggaran</label>
+                                <select class="form-select" id="jenis" name="id_jenis">
+>>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
 
                             </select>
@@ -94,11 +131,29 @@
                                 $no = 1;
                                 foreach ($joinpelanggaran as $u) : ?>
                                     <tr>
+<<<<<<< HEAD
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
                                         </td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?= $u['nama_siswa'] ?></h6>
+=======
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">No</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Nama Siswa</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Pelanggaran</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Poin</h6>
+                                        </th>
+                                        <th class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-0">Aksi</h6>
+                                        </th>
+>>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                                         </td>
                                         <td class="border-bottom-0">

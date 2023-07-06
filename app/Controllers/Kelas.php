@@ -47,13 +47,6 @@ class Kelas extends BaseController
                     'required' => 'NIP Harus diisi'
 
                 ]
-            ],
-            'jk_wali' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Jenis Kelamin Harus dipilih'
-
-                ]
             ]
 
 
@@ -66,8 +59,7 @@ class Kelas extends BaseController
         $this->kelasModel->save([
             'nama_kelas' => $this->request->getVar('nama_kelas'),
             'wali_kelas' => $this->request->getVar('wali_kelas'),
-            'nip' => $this->request->getVar('nip'),
-            'jk_wali' => $this->request->getVar('jk_wali'),
+            'nip' => $this->request->getVar('nip')
 
 
         ]);
@@ -116,13 +108,6 @@ class Kelas extends BaseController
                     'required' => 'NIP Harus diisi'
 
                 ]
-            ],
-            'jk_wali' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Jenis Kelamin Harus dipilih'
-
-                ]
             ]
 
 
@@ -137,7 +122,6 @@ class Kelas extends BaseController
             'nama_kelas' => $this->request->getVar('nama_kelas'),
             'wali_kelas' => $this->request->getVar('wali_kelas'),
             'nip' => $this->request->getVar('nip'),
-            'jk_wali' => $this->request->getVar('jk_wali'),
 
         ]);
         session()->setFlashdata('pesan', 'Ubah Data Surat Masuk Berhasil');

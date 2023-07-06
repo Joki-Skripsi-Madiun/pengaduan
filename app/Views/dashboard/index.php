@@ -14,10 +14,10 @@
             </div>
             <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-user"></i></a>
           </div>
-          <div class="card-body pt-3 p-4">
+          <div class="card-body pt-3 p-4  bg-secondary">
             <h6 class="fw-semibold fs-4">Siswa</h6>
             <div class="d-flex align-items-center justify-content-between">
-              <h6 class="fw-semibold fs-4 mb-0"><?= $siswa; ?> <span class="ms-2 fw-normal text-muted fs-3">siswa</span></h6>
+              <h6 class="fw-semibold fs-4 mb-0"><?= $siswa; ?> <span class="ms-2 fw-normal fs-3">siswa</span></h6>
 
             </div>
           </div>
@@ -33,10 +33,10 @@
 
             <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"> <i class="ti ti-book-2"></i></a>
           </div>
-          <div class="card-body pt-3 p-4">
+          <div class="card-body pt-3 p-4 bg-warning">
             <h6 class="fw-semibold fs-4">Kelas</h6>
             <div class="d-flex align-items-center justify-content-between">
-              <h6 class="fw-semibold fs-4 mb-0"><?= $kelas; ?> <span class="ms-2 fw-normal text-muted fs-3">kelas</span></h6>
+              <h6 class="fw-semibold fs-4 mb-0"><?= $kelas; ?> <span class="ms-2 fw-normal fs-3">kelas</span></h6>
 
             </div>
           </div>
@@ -52,10 +52,10 @@
 
             <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-user-plus"></i></a>
           </div>
-          <div class="card-body pt-3 p-4">
+          <div class="card-body pt-3 p-4 bg-danger">
             <h6 class="fw-semibold fs-4">Pelanggaran</h6>
             <div class="d-flex align-items-center justify-content-between">
-              <h6 class="fw-semibold fs-4 mb-0"><?= $pelanggaran; ?> <span class="ms-2 fw-normal text-muted fs-3">pelanggaran</span></h6>
+              <h6 class="fw-semibold fs-4 mb-0"><?= $pelanggaran; ?> <span class="ms-2 fw-normal fs-3">pelanggaran</span></h6>
 
             </div>
           </div>
@@ -71,10 +71,10 @@
 
             <a href="javascript:void(0)" class="bg-primary rounded-circle p-2 text-white d-inline-flex position-absolute bottom-0 end-0 mb-n3 me-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Add To Cart"><i class="ti ti-device-analytics"></i></a>
           </div>
-          <div class="card-body pt-3 p-4">
+          <div class="card-body pt-3 p-4 bg-success">
             <h6 class="fw-semibold fs-4">Prestasi</h6>
             <div class="d-flex align-items-center justify-content-between">
-              <h6 class="fw-semibold fs-4 mb-0"><?= $prestasi; ?> <span class="ms-2 fw-normal text-muted fs-3">prestasi</span></h6>
+              <h6 class="fw-semibold fs-4 mb-0"><?= $prestasi; ?> <span class="ms-2 fw-normal fs-3">prestasi</span></h6>
 
             </div>
           </div>
@@ -204,7 +204,7 @@ if (user()->status == 2) { ?>
             <div class="card-body pt-3 p-4">
               <h6 class="fw-semibold fs-4">Siswa</h6>
               <div class="d-flex align-items-center justify-content-between">
-                <h6 class="fw-semibold fs-4 mb-0"><?= $siswa; ?> <span class="ms-2 fw-normal text-muted fs-3">siswa</span></h6>
+                <h6 class="fw-semibold fs-4 mb-0"><?= $siswa; ?> <span class="ms-2 fw-normal fs-3">siswa</span></h6>
 
               </div>
             </div>
@@ -224,7 +224,7 @@ if (user()->status == 2) { ?>
             <div class="card-body pt-3 p-4">
               <h6 class="fw-semibold fs-4">Pelanggaran</h6>
               <div class="d-flex align-items-center justify-content-between">
-                <h6 class="fw-semibold fs-4 mb-0"><?= $pelanggaran; ?> <span class="ms-2 fw-normal text-muted fs-3">pelanggaran</span></h6>
+                <h6 class="fw-semibold fs-4 mb-0"><?= $pelanggaran; ?> <span class="ms-2 fw-normal fs-3">pelanggaran</span></h6>
 
               </div>
             </div>
@@ -305,7 +305,7 @@ if (user()->status == 2) { ?>
               <div class="card-body pt-3 p-4">
                 <h6 class="fw-semibold fs-4">Siswa</h6>
                 <div class="d-flex align-items-center justify-content-between">
-                  <h6 class="fw-semibold fs-4 mb-0"><?= $siswa; ?> <span class="ms-2 fw-normal text-muted fs-3">siswa</span></h6>
+                  <h6 class="fw-semibold fs-4 mb-0"><?= $siswa; ?> <span class="ms-2 fw-normal fs-3">siswa</span></h6>
 
                 </div>
               </div>
@@ -326,7 +326,7 @@ if (user()->status == 2) { ?>
               <div class="card-body pt-3 p-4">
                 <h6 class="fw-semibold fs-4">Prestasi</h6>
                 <div class="d-flex align-items-center justify-content-between">
-                  <h6 class="fw-semibold fs-4 mb-0"><?= $prestasi; ?> <span class="ms-2 fw-normal text-muted fs-3">prestasi</span></h6>
+                  <h6 class="fw-semibold fs-4 mb-0"><?= $prestasi; ?> <span class="ms-2 fw-normal fs-3">prestasi</span></h6>
 
                 </div>
               </div>
