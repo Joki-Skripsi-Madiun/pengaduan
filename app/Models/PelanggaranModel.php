@@ -30,7 +30,6 @@ class PelanggaranModel extends Model
             $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
             $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
             $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
-            $builder->orderBy('id_pelanggaran', 'DESC');
             $query = $builder->get();
             return $query->getResultArray();
         }
@@ -40,9 +39,8 @@ class PelanggaranModel extends Model
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
-        $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_jenis');
+        $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('id_pelanggaran', $id_pelanggaran);
-        $builder->orderBy('id_pelanggaran', 'DESC');
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -70,7 +68,7 @@ class PelanggaranModel extends Model
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->limit($limit);
-        $builder->orderBy('id_pelanggaran', 'DESC');
+
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -85,7 +83,7 @@ class PelanggaranModel extends Model
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('pelanggaran.id_siswa', $id_siswa);
-        $builder->orderBy('id_pelanggaran', 'DESC');
+
         $query = $builder->get();
         return $query->getResultArray();
     }

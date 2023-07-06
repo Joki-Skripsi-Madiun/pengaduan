@@ -105,7 +105,7 @@ class Pelanggaran extends BaseController
             'siswa' => $this->siswaModel->getsiswa(),
             'pelanggaran' => $this->pelanggaranModel->getpelanggaran($id_pelanggaran),
             'jenis' => $this->jenisModel->getjenis(),
-            'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran($id_pelanggaran),
+            'joinpelanggaran' => $this->pelanggaranModel->joinPelanggaran($id_pelanggaran),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
 
 

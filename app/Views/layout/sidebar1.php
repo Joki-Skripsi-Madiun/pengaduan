@@ -1,13 +1,13 @@
  <!-- Sidebar Start -->
- <aside class="left-sidebar">
+ <aside class="left-sidebar" style="background: rgb(255,255,255); background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(138,151,255,1) 0%, rgba(249,249,249,1) 94%);">
      <!-- Sidebar scroll-->
      <div>
-         <div class="brand-logo d-flex align-items-center justify-content-between">
-             <!-- <a href="/index.html" class="text-nowrap logo-img">
-                 <img src="<?= base_url(); ?>/img/logosekolah.png" width="80" alt="" />
+         <div class="brand-logo d-flex align-items-center justify-content-between bg-danger">
+             <a href="/index.html" class="text-nowrap logo-img">
+                 <img src="<?= base_url(); ?>/img/logosekolah.png" width="40" alt="" />
 
-             </a> -->
-             <h4>Administrator</h4>
+             </a>
+             <h4 class="text-white">Administrator</h4>
          </div>
          <!-- Sidebar navigation-->
          <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
