@@ -20,6 +20,15 @@
                                 </select>
                             </div>
                             <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Kategori Pelanggaran</label>
+                                <select class="form-select" id="kategori" name="id_kategori">
+                                    <option selected value="<?= $joinpelanggaran[0]['id_kategori'] ?>"><?= $joinpelanggaran[0]['nama_kategori'] ?></option>
+                                    <?php foreach ($kategori as $r) : ?>
+                                        <option value="<?= $r['id_kategori'] ?>"><?= $r['nama_kategori'] ?></option>
+                                    <?php endforeach ?>
+                                </select>
+                            </div>
+                            <div class="mb-3">
                                 <label for="exampleInputEmail1" class="form-label">Jenis Pelanggaran</label>
                                 <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_jenis">
                                     <option selected value="<?= $joinpelanggaran[0]['id_jenis'] ?>"><?= $joinpelanggaran[0]['nama_jenis'] ?></option>

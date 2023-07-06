@@ -2,8 +2,8 @@
  <aside class="left-sidebar" style="background: rgb(255,255,255); background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(138,151,255,1) 0%, rgba(249,249,249,1) 94%);">
      <!-- Sidebar scroll-->
      <div>
-         <div class="brand-logo d-flex align-items-center justify-content-between bg-danger">
-             <a href="/index.html" class="text-nowrap logo-img">
+         <div class="brand-logo d-flex align-items-center justify-content-between bg-primary">
+             <a href="/dashboard" class="text-nowrap logo-img">
                  <img src="<?= base_url(); ?>/img/logosekolah.png" width="40" alt="" />
 
              </a>
@@ -30,7 +30,7 @@
                          <span>
                              <i class="ti ti-aperture"></i>
                          </span>
-                         <span class="hide-menu">Landing Page</span>
+                         <span class="hide-menu">Setting</span>
                      </a>
                  </li>
                  <li class="nav-small-cap">

@@ -47,7 +47,16 @@
                             <p><?= $joinprestasi[0]['nip'] ?></p>
                         </div>
 
-                        <a href="/prestasi" class="btn btn-primary">Kembali</a>
+                        <label for="floatingInput">Foto Pelanggaran</label>
+
+
+                        <div class="col-12 mb-3">
+                            <img src="<?php echo base_url(); ?>/img/<?= (old('foto_prestasi') ? old('foto_prestasi') : $joinprestasi[0]['foto_prestasi']); ?>" width="100">
+                            <br>
+                        </div>
+                        <a class="btn btn-sm btn-primary" href="<?= base_url(); ?>/prestasi" aria-expanded="false">
+                            Kembali
+                        </a>
 
 
 

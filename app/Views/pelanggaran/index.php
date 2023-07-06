@@ -11,7 +11,7 @@
                         <hr>
                         <form class="row g-3" action="/pelanggaran/save" method="post" enctype="multipart/form-data">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Waktu</label>
+                                <label for="exampleInputEmail1" class="form-label">Tanggal</label>
                                 <input type="date" class="form-control" id="exampleInputEmail1" name="waktu" aria-describedby="emailHelp">
 
                             </div>
@@ -34,7 +34,7 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Jenis Pelanggaran</label>
+                                <label for="exampleInputEmail1" class="form-label">Pelanggaran</label>
                                 <select class="form-select" id="jenis" name="id_jenis">
 
 
@@ -71,13 +71,13 @@
                                 <thead class="text-dark fs-4">
                                     <tr>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Id</h6>
+                                            <h6 class="fw-semibold mb-0">No</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Nama Siswa</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Jenis Pelanggaran</h6>
+                                            <h6 class="fw-semibold mb-0">Pelanggaran</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Poin</h6>

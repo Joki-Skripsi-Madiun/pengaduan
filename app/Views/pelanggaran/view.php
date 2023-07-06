@@ -47,8 +47,16 @@
                             <p><?= $joinpelanggaran[0]['nip'] ?></p>
                         </div>
 
+                        <label for="floatingInput">Foto Pelanggaran</label>
 
-                        <button type="submit" class="btn btn-primary">Kembali</button>
+
+                        <div class="col-12 mb-3">
+                            <img src="<?php echo base_url(); ?>/img/<?= (old('foto_pelanggaran') ? old('foto_pelanggaran') : $joinpelanggaran[0]['foto_pelanggaran']); ?>" width="100">
+                            <br>
+                        </div>
+                        <a class="btn btn-sm btn-primary" href="<?= base_url(); ?>/pelanggaran" aria-expanded="false">
+                            Kembali
+                        </a>
 
 
                     </div>
