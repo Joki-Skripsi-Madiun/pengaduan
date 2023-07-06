@@ -19,7 +19,28 @@
                                         <option value="Internasional">Internasional</option>
                                     </select>
                             </div>
-                            <div class="col-3"><button type="submit" class="btn btn-primary">Pilih</button>
+                            <div class="col-2"><button type="submit" class="btn btn-primary">Pilih</button>
+                                </form>
+
+                            </div>
+                            <div class="col-2">
+                                <form action="/laporan/prestasi/tingkat/print" method="post">
+                                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="kelas">
+                                        <option selected>Pilih Kelas</option>
+                                        <?php foreach ($kelas as $k) : ?>
+                                            <option value="<?= $k['nama_kelas']; ?>"><?= $k['nama_kelas']; ?></option>
+                                        <?php endforeach ?>
+                                    </select>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="tahun">
+                                    <option selected>Pilih Tahun</option>
+                                    <?php for ($tahun = 2000; $tahun <= 2040; $tahun++) { ?>
+                                        <option value="<?= $tahun; ?>"><?= $tahun; ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                            <div class="col-1"><button type="submit" class="btn btn-primary">Pilih</button>
                                 </form>
 
                             </div>

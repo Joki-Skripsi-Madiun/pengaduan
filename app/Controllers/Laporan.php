@@ -35,9 +35,14 @@ class Laporan extends BaseController
         //include helper form
         helper(['form']);
         $session = session();
+        for ($tahun = 200; $tahun <= 2040; $tahun++) {
+            $tahun;
+        }
         $data = [
             'session' => $session,
             'siswa' => $this->siswaModel->getsiswa(),
+            'kelas' => $this->kelasModel->getKelas(),
+            'tahun' => $tahun,
             'prestasi' => $this->prestasiModel->getprestasi(),
             'joinprestasi' => $this->prestasiModel->joinprestasi(),
 

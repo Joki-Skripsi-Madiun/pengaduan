@@ -55,29 +55,27 @@
     <!-- header section start -->
     <!-- header section end -->
     <!-- banner section start -->
-    <div class="banner_section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-7">
-                    <div class="banner_img ms-5"><img width="800px" src="<?= base_url(); ?>/assets/web/images/depan.jpg"></div>
-                </div>
-                <?php foreach ($landing as $u) : ?>
-                    <div class="col-sm-5">
-                        <div class="d-flex justify-content-center"><img width="100px" src="<?= base_url(); ?>/img/logosekolah.png"></a></div>
-                        <h6 class="clever_text text-center"><?= $u['judul_setting'] ?></h6>
-                        <?php if (logged_in()) { ?>
-                            <div class="read_bt_2 d-flex justify-content-center"><a href="<?= base_url(); ?>/dashboard">Dashboard</a></div>
-                        <?php } else { ?>
-                            <div class="read_bt_2 d-flex justify-content-center"><a href="<?= base_url(); ?>/login">Login</a></div>
-                        <?php } ?>
-                    </div>
-                <?php endforeach ?>
-            </div>
+
+    <div class="row">
+        <div class="col-sm-7">
+            <img width="800px" src="<?= base_url(); ?>/assets/web/images/depan.jpg">
         </div>
+        <?php foreach ($landing as $u) : ?>
+            <div class="col-sm-5 mt-5">
+                <div class="d-flex justify-content-center mt-5"><img width="100px" src="<?= base_url(); ?>/img/logosekolah.png"></a></div>
+                <h6 class="clever_text text-center"><?= $u['judul_setting'] ?></h6>
+                <?php if (logged_in()) { ?>
+                    <div class="read_bt_2 d-flex justify-content-center"><a href="<?= base_url(); ?>/dashboard">Dashboard</a></div>
+                <?php } else { ?>
+                    <div class="read_bt_2 d-flex justify-content-center"><a href="<?= base_url(); ?>/login">Login</a></div>
+                <?php } ?>
+            </div>
+        <?php endforeach ?>
     </div>
+
     <!-- banner section end -->
     <!-- contact section start -->
-    <div class="contact_section layout_padding">
+    <div class="contact_section">
         <div class="container">
             <h1 class="contact_text">About Us</h1>
             <div class="contact_section_2">
@@ -85,17 +83,13 @@
                     <div class="col-md-6">
 
                         <?php foreach ($landing as $u) : ?>
-                            <h1 class="data_text"><?= $u['judul_setting'] ?></h1>
+                            <h2 class="text-white"><?= $u['judul_setting'] ?></h2>
                             <p class="lorem_text"><?= $u['keterangan_setting'] ?></p>
                         <?php endforeach ?>
 
                     </div>
                     <div class="col-md-6">
-                        <div class="map">
-                            <div class="map-responsive">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.8057370488687!2d111.57160307406436!3d-7.596110175065113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79bf2ed5e312d9%3A0x7bedbab69e35988!2sSMPN%202%20Nglames!5e0!3m2!1sen!2sid!4v1687527747233!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.8057370488687!2d111.57160307406436!3d-7.596110175065113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e79bf2ed5e312d9%3A0x7bedbab69e35988!2sSMPN%202%20Nglames!5e0!3m2!1sen!2sid!4v1687527747233!5m2!1sen!2sid" width="600" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
@@ -110,6 +104,7 @@
             <p class="copyright">Design and Developed by SMP N 2 NGLAMES</p>
         </div>
     </div>
+
     <!-- copyright section end -->
     <!-- Javascript files-->
     <script src="<?= base_url(); ?>/assets/web/js/jquery.min.js"></script>
