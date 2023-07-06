@@ -7,7 +7,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Siswa <a href="<?= base_url() ?>siswa/template/download"> Download Template Excel</a></h5>
+                        <h5 class="card-title fw-semibold mb-4">Tambah Siswa <a href="<?= base_url() ?>siswa/template/download"> Download Template Excel</a></h5>
                         <?php if (session('success')) : ?>
                             <div><?= session('success') ?></div>
                         <?php endif; ?>

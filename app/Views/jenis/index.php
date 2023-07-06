@@ -9,7 +9,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Jenis</h5>
+                        <h5 class="card-title fw-semibold mb-4">Tambah Jenis</h5>
                         <hr>
                         <form class="row g-3" action="/jenis/save" method="post" enctype="multipart/form-data">
                             <div class="mb-3">
@@ -48,7 +48,7 @@
                                 <thead class="text-dark fs-4">
                                     <tr>
                                         <th>
-                                            <h6 class="fw-semibold mb-0">Id</h6>
+                                            <h6 class="fw-semibold mb-0">No</h6>
                                         </th>
                                         <th>
                                             <h6 class="fw-semibold mb-0">Jenis</h6>

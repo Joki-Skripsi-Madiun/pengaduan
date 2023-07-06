@@ -7,7 +7,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Prestasi</h5>
+                        <h5 class="card-title fw-semibold mb-4">Tambah Prestasi</h5>
                         <hr>
                         <form class="row g-3" action="/prestasi/save" method="post" enctype="multipart/form-data">
                             <div class="mb-3">

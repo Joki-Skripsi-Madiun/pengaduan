@@ -7,7 +7,7 @@
             <div class="col-4">
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Kelas</h5>
+                        <h5 class="card-title fw-semibold mb-4">Tambah Kelas</h5>
                         <hr>
                         <form class="row g-3" action="/kelas/save" method="post" enctype="multipart/form-data">
                             <div class="mb-3">
@@ -23,7 +23,7 @@
 
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">NIP Wali Kelas</label>
+                                <label for="exampleInputEmail1" class="form-label">NIP</label>
                                 <input type="text" class="form-control" name="nip" id="exampleInputEmail1" aria-describedby="emailHelp">
 
                             </div>
@@ -44,7 +44,7 @@
                                 <thead class="text-dark fs-4">
                                     <tr>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Id</h6>
+                                            <h6 class="fw-semibold mb-0">No</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Kelas</h6>
@@ -53,7 +53,7 @@
                                             <h6 class="fw-semibold mb-0">Wali Kelas</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">NIP Kelas</h6>
+                                            <h6 class="fw-semibold mb-0">NIP</h6>
                                         </th>
                                         <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Jumlah Siswa</h6>
