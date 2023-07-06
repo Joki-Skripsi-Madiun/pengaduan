@@ -87,6 +87,18 @@
             </li> -->
                  <li class="nav-small-cap">
                      <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                     <span class="hide-menu">Prestasi</span>
+                 </li>
+                 <li class="sidebar-item">
+                     <a class="sidebar-link" href="<?= base_url(); ?>prestasi" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-device-analytics"></i>
+                         </span>
+                         <span class="hide-menu">Data Prestasi</span>
+                     </a>
+                 </li>
+                 <li class="nav-small-cap">
+                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                      <span class="hide-menu">Pelanggaran</span>
                  </li>
                  <li class="sidebar-item">
@@ -113,29 +125,10 @@
                          <span class="hide-menu">Data Pelanggaran</span>
                      </a>
                  </li>
-                 <li class="nav-small-cap">
-                     <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                     <span class="hide-menu">Prestasi</span>
-                 </li>
-                 <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>prestasi" aria-expanded="false">
-                         <span>
-                             <i class="ti ti-device-analytics"></i>
-                         </span>
-                         <span class="hide-menu">Data Prestasi</span>
-                     </a>
-                 </li>
+
                  <li class="nav-small-cap">
                      <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                      <span class="hide-menu">Laporan</span>
-                 </li>
-                 <li class="sidebar-item">
-                     <a class="sidebar-link" href="<?= base_url(); ?>laporan" aria-expanded="false">
-                         <span>
-                             <i class="ti ti-files"></i>
-                         </span>
-                         <span class="hide-menu">Laporan Pelanggaran</span>
-                     </a>
                  </li>
                  <li class="sidebar-item">
                      <a class="sidebar-link" href="<?= base_url(); ?>laporan/prestasi" aria-expanded="false">
@@ -145,6 +138,15 @@
                          <span class="hide-menu">Laporan Prestasi</span>
                      </a>
                  </li>
+                 <li class="sidebar-item">
+                     <a class="sidebar-link" href="<?= base_url(); ?>laporan" aria-expanded="false">
+                         <span>
+                             <i class="ti ti-files"></i>
+                         </span>
+                         <span class="hide-menu">Laporan Pelanggaran</span>
+                     </a>
+                 </li>
+
 
              </ul>
          </nav>
