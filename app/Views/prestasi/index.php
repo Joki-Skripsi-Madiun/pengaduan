@@ -3,7 +3,6 @@
 <!--  Header End -->
 
 <div class="container-fluid">
-<<<<<<< HEAD
     <div class="row">
         <div class="col-4">
             <div class="card">
@@ -20,25 +19,6 @@
                                 <?php endforeach ?>
                             </select>
                         </div>
-=======
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Tambah Prestasi</h5>
-                        <hr>
-                        <form class="row g-3" action="/prestasi/save" method="post" enctype="multipart/form-data">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Siswa</label>
-                                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_siswa">
-                                    <option selected>Open this select menu</option>
-                                    <?php foreach ($siswa as $k) : ?>
-                                        <option value="<?= $k['id_siswa'] ?>"><?= $k['nama_siswa'] ?></option>
-                                    <?php endforeach ?>
-                                </select>
-                            </div>
->>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Nama Prestasi</label>
@@ -105,27 +85,11 @@
                                 <?php $no = 1;
                                 foreach ($joinprestasi as $u) : ?>
                                     <tr>
-<<<<<<< HEAD
-                                        <td class="border-bottom-0">
+                                        <td>
                                             <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
                                         </td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?= $u['nama_siswa'] ?></h6>
-=======
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">No</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Nama Siswa</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Jenis Prestasi</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Aksi</h6>
-                                        </th>
->>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
-
                                         </td>
                                         <td class="border-bottom-0">
                                             <h6 class="fw-semibold mb-1"><?= $u['nama_prestasi'] ?></h6>

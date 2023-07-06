@@ -5,7 +5,7 @@
     <td><?php if ($jumlahBobot >= $setting['kkm_bobot']) { ?>
             <span class="btn btn-danger btn-circle btn-sm">Buruk</span>
         <?php }
-        if ($jumlahBobot <= $setting['kkm_bobot']) { ?>
+        if ($jumlahBobot < $setting['kkm_bobot']) { ?>
             <span class="btn btn-success btn-circle btn-sm">Baik</span>
         <?php } ?>
     </td>

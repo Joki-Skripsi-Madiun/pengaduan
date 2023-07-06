@@ -26,6 +26,7 @@ class KategoriModel extends Model
         $builder->select('*');
         $builder->join('tb_jenis', 'tb_jenis.id_jenis = tb_surat.id_jenis');
         $builder->where('status', $status);
+        $builder->orderBy('jenis.id_jenis', 'ACS');
         $query = $builder->get();
         return $query;
     }

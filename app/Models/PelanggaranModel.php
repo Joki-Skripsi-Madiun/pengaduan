@@ -30,6 +30,7 @@ class PelanggaranModel extends Model
             $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
             $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
             $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
+            $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
             $query = $builder->get();
             return $query->getResultArray();
         }
@@ -41,6 +42,7 @@ class PelanggaranModel extends Model
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('id_pelanggaran', $id_pelanggaran);
+        $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -55,6 +57,7 @@ class PelanggaranModel extends Model
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('pelanggaran.id_siswa', $id_siswa);
+        $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
         $query = $builder->get();
         return $query->getRow()->bobot;
     }
@@ -68,6 +71,7 @@ class PelanggaranModel extends Model
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
+        $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
         $builder->limit($limit);
 
         $query = $builder->get();
@@ -84,6 +88,7 @@ class PelanggaranModel extends Model
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('pelanggaran.id_siswa', $id_siswa);
+        $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -99,6 +104,7 @@ class PelanggaranModel extends Model
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('kelas.nama_kelas', $kelas);
         $builder->where('YEAR(pelanggaran.waktu)', $tahun);
+        $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }

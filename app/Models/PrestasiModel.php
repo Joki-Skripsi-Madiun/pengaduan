@@ -29,7 +29,7 @@ class PrestasiModel extends Model
             $builder->select('*');
             $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
             $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
-
+            $builder->orderBy('prestasi.id_prestasi', 'ACS');
             $query = $builder->get();
             return $query->getResultArray();
         }
@@ -39,7 +39,7 @@ class PrestasiModel extends Model
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->where('id_prestasi', $id_prestasi);
-
+        $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -51,7 +51,7 @@ class PrestasiModel extends Model
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
-
+        $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $builder->limit($limit);
         $query = $builder->get();
         return $query->getResultArray();
@@ -65,6 +65,7 @@ class PrestasiModel extends Model
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->where('tingkat_prestasi', $tingkat_prestasi);
+        $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }
@@ -78,6 +79,7 @@ class PrestasiModel extends Model
         $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
         $builder->where('nama_kelas', $kelas);
         $builder->where('YEAR(prestasi.tgl_prestasi)', $tahun);
+        $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }

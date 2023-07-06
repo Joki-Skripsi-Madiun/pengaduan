@@ -5,7 +5,6 @@
 <!--  Header End -->
 
 <div class="container-fluid">
-<<<<<<< HEAD
     <div class="row">
         <div class="col-4">
             <div class="card">
@@ -16,19 +15,6 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Jenis</label>
                             <input type="text" class="form-control" name="nama_jenis" id="exampleInputEmail1" aria-describedby="emailHelp">
-=======
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title fw-semibold mb-4">Tambah Jenis</h5>
-                        <hr>
-                        <form class="row g-3" action="/jenis/save" method="post" enctype="multipart/form-data">
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Jenis</label>
-                                <input type="text" class="form-control" name="nama_jenis" id="exampleInputEmail1" aria-describedby="emailHelp">
->>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                         </div>
                         <div class="mb-3">
@@ -62,7 +48,7 @@
                             <thead class="text-dark fs-4">
                                 <tr>
                                     <th>
-                                        <h6 class="fw-semibold mb-0">Id</h6>
+                                        <h6 class="fw-semibold mb-0">No</h6>
                                     </th>
                                     <th>
                                         <h6 class="fw-semibold mb-0">Jenis</h6>
@@ -82,7 +68,6 @@
                                 <?php $no = 1;
                                 foreach ($joinjenis as $u) : ?>
                                     <tr>
-<<<<<<< HEAD
                                         <td>
                                             <h6 class="fw-semibold mb-0"><?= $no++; ?></h6>
                                         </td>
@@ -111,23 +96,6 @@
                                                 </form>
                                             </div>
                                         </td>
-=======
-                                        <th>
-                                            <h6 class="fw-semibold mb-0">No</h6>
-                                        </th>
-                                        <th>
-                                            <h6 class="fw-semibold mb-0">Jenis</h6>
-                                        </th>
-                                        <th>
-                                            <h6 class="fw-semibold mb-0">Kategori</h6>
-                                        </th>
-                                        <th>
-                                            <h6 class="fw-semibold mb-0">Bobot</h6>
-                                        </th>
-                                        <th>
-                                            <h6 class="fw-semibold mb-0">Aksi</h6>
-                                        </th>
->>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
                                     </tr>
                                 <?php endforeach ?>
 

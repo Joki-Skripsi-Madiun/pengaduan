@@ -32,6 +32,7 @@ class JenisModel extends Model
             $builder = $db->table('jenis_pelanggaran');
             $builder->select('*');
             $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
+            $builder->orderBy('jenis_pelanggaran.id_jenis', 'ACS');
             $query = $builder->get();
             return $query->getResultArray();
         }
@@ -40,6 +41,7 @@ class JenisModel extends Model
         $builder->select('*');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('id_jenis', $id_jenis);
+        $builder->orderBy('jenis_pelanggaran.id_jenis', 'ACS');
         $query = $builder->get();
         return $query->getResultArray();
     }
