@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-a:3:{s:4:"time";i:1688219096;s:3:"ttl";i:300;s:4:"data";a:1:{i:0;a:4:{s:8:"group_id";s:1:"1";s:7:"user_id";s:2:"22";s:4:"name";s:13:"administrator";s:11:"description";s:13:"Administrator";}}}
-=======
-a:3:{s:4:"time";i:1688215596;s:3:"ttl";i:300;s:4:"data";a:1:{i:0;a:4:{s:8:"group_id";s:1:"2";s:7:"user_id";s:2:"22";s:4:"name";s:2:"bk";s:11:"description";s:19:"Bimbingan Konseling";}}}
->>>>>>> 07b7dc99c4ec19bd6c0e8aeed05a2e68db414dba
+a:3:{s:4:"time";i:1688658556;s:3:"ttl";i:300;s:4:"data";a:1:{i:0;a:4:{s:8:"group_id";s:1:"1";s:7:"user_id";s:2:"22";s:4:"name";s:13:"administrator";s:11:"description";s:13:"Administrator";}}}

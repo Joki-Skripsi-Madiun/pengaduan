@@ -90,6 +90,9 @@
                         <h6>Nama Siswa</h6>
                     </th>
                     <th>
+                        <h6>Kelas</h6>
+                    </th>
+                    <th>
                         <h6>Jenis Pelanggaran</h6>
                     </th>
                     <th>
@@ -110,6 +113,10 @@
                         </td>
                         <td>
                             <h6><?= $u['nama_siswa'] ?></h6>
+
+                        </td>
+                        <td>
+                            <h6><?= $u['nama_kelas'] ?></h6>
 
                         </td>
                         <td>

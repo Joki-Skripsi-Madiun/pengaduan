@@ -15,6 +15,7 @@ class Laporan extends BaseController
             'siswa' => $this->siswaModel->getsiswa(),
             'pelanggaran' => $this->pelanggaranModel->getpelanggaran(),
             'jenis' => $this->jenisModel->getjenis(),
+            'kelas' => $this->kelasModel->getKelas(),
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
 
@@ -95,6 +96,23 @@ class Laporan extends BaseController
         return view('laporan/print_prestasi', $data);
     }
 
+    public function printPrestasiKelas()
+    {
+        //include helper form
+        helper(['form']);
+        $kelas = $this->request->getVar('kelas');
+        $tahun = $this->request->getVar('tahun');
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'prestasi' => $this->prestasiModel->getprestasi(),
+            'joinprestasi' => $this->prestasiModel->joinPrestasiKelas($kelas, $tahun),
+
+        ];
+        return view('laporan/print_prestasi', $data);
+    }
+
     public function printPelanggaran()
     {
         //include helper form
@@ -106,6 +124,26 @@ class Laporan extends BaseController
             'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
             'jenis' => $this->jenisModel->getjenis(),
             'joinpelanggaran' => $this->pelanggaranModel->joinpelanggaran(),
+            'joinsiswa' => $this->siswaModel->joinsiswa(),
+
+        ];
+
+        return view('laporan/print_pelanggaran', $data);
+    }
+
+    public function printPelanggaranKelas()
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $kelas = $this->request->getVar('kelas');
+        $tahun = $this->request->getVar('tahun');
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'pelanggaran' => $this->pelanggaranModel->getPelanggaran(),
+            'jenis' => $this->jenisModel->getjenis(),
+            'joinpelanggaran' => $this->pelanggaranModel->joinPelanggaranKelas($kelas, $tahun),
             'joinsiswa' => $this->siswaModel->joinsiswa(),
 
         ];

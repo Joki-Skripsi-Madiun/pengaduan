@@ -69,6 +69,19 @@ class PrestasiModel extends Model
         return $query->getResultArray();
     }
 
+    public function joinPrestasiKelas($kelas, $tahun)
+    {
+        $db      = \Config\Database::connect();
+        $builder = $db->table('prestasi');
+        $builder->select('*');
+        $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
+        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->where('nama_kelas', $kelas);
+        $builder->where('YEAR(prestasi.tgl_prestasi)', $tahun);
+        $query = $builder->get();
+        return $query->getResultArray();
+    }
+
     public function hitungJumlahPrestasi()
     {
         $db = \Config\Database::connect();
