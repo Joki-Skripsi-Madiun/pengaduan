@@ -61,8 +61,12 @@
                                         <h6 class="fw-semibold mb-0">Nama Siswa</h6>
                                     </th>
                                     <th class="border-bottom-0">
+                                        <h6 class="fw-semibold mb-0">Kelas</h6>
+                                    </th>
+                                    <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Nama Prestasi</h6>
                                     </th>
+
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Tanggal</h6>
                                     </th>
@@ -83,12 +87,16 @@
 
                                         </td>
                                         <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-1"><?= $u['nama_prestasi'] ?></h6>
+                                            <h6 class="fw-semibold mb-1"><?= $u['nama_kelas'] ?></h6>
 
                                         </td>
                                         <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-1"><?= date('d-m-Y', strtotime($u['tgl_prestasi']));  ?></h6>
+                                            <h6 class="fw-semibold mb-1"><?= $u['nama_prestasi'] ?></h6>
 
+                                        </td>
+
+                                        <td class="border-bottom-0">
+                                            <h6 class="fw-semibold mb-1"><?= date('d-m-Y', strtotime($u['tgl_prestasi']));  ?></h6>
                                         </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">

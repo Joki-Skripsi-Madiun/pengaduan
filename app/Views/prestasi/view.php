@@ -55,6 +55,9 @@
             </div>
         </div>
         <div class="col">
+            <div class="mb-3">
+                <h5>Foto Prestasi</h5>
+            </div>
             <img width="400px" src="<?= base_url(); ?>/img/<?= $joinprestasi[0]['foto_prestasi'] ?>" alt="">
         </div>
     </div>
