@@ -54,6 +54,9 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <img width="400px" src="<?= base_url(); ?>/img/<?= $joinprestasi[0]['foto_prestasi'] ?>" alt="">
+        </div>
     </div>
 
 

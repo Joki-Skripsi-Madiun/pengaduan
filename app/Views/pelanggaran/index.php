@@ -73,15 +73,13 @@
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">No</h6>
                                     </th>
-                                    <th class="border-bottom-0">
+                                    <th style="width: 200px;" class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Nama Siswa</h6>
                                     </th>
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Jenis Pelanggaran</h6>
                                     </th>
-                                    <th class="border-bottom-0">
-                                        <h6 class="fw-semibold mb-0">Poin</h6>
-                                    </th>
+
                                     <th class="border-bottom-0">
                                         <h6 class="fw-semibold mb-0">Aksi</h6>
                                     </th>
@@ -105,10 +103,7 @@
                                             <h6 class="fw-semibold mb-1"><?= $u['nama_jenis'] ?></h6>
 
                                         </td>
-                                        <td class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-1"><?= $u['bobot'] ?></h6>
 
-                                        </td>
                                         <td class="border-bottom-0">
                                             <div class="d-flex align-items-center gap-2">
                                                 <a class="badge bg-warning rounded-2 fw-semibold" href="<?= base_url(); ?>/pelanggaran/edit/<?= $u['id_pelanggaran'] ?>">

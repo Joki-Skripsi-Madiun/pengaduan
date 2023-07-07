@@ -52,6 +52,9 @@
                 </div>
             </div>
         </div>
+        <div class="col">
+            <img width="400px" src="<?= base_url(); ?>/img/<?= $joinpelanggaran[0]['foto_pelanggaran'] ?>" alt="">
+        </div>
     </div>
 
 
