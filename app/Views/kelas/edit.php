@@ -19,21 +19,8 @@
                             <label for="exampleInputEmail1" class="form-label">Wali Kelas</label>
                             <input type="text" class="form-control" value="<?= $kelas['wali_kelas'] ?>" name="wali_kelas" id="exampleInputEmail1" aria-describedby="emailHelp">
 
-<<<<<<< HEAD
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputtext1" class="form-label">Jenis Kelamin</label>
-                            <select class="form-select px-3" id="floatingSelect" aria-label="Floating label select example" name="jk_wali">
-                                <option selected value="<?= $kelas['jk_wali'] ?>"><?= $kelas['jk_wali'] ?></option>
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
 
-                            </select>
-                        </div>
-=======
-                            </div>
-
->>>>>>> 2ce0afbbfb1c43858aaad853544a753b858dab9e
 
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">NIP Wali Kelas</label>
