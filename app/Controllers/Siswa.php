@@ -240,4 +240,44 @@ class Siswa extends BaseController
         $file = 'import_siswa.xlsx';
         return $this->response->download('assets/' . $file, null);
     }
+
+    public function kelas()
+    {
+        //include helper form
+        helper(['form']);
+        $session = session();
+        $data = [
+            'session' => $session,
+            'siswa' => $this->siswaModel->getsiswa(),
+            'kelas' => $this->kelasModel->getkelas(),
+            'joinsiswa' => $this->siswaModel->joinsiswa(),
+        ];
+        return view('siswa/kelas', $data);
+    }
+
+    public function updateByKelas()
+    {
+        $kelasLama = $this->request->getVar('kelas_lama');
+        $kelasBaru = $this->request->getVar('kelas_baru');
+        $siswaModel = new SiswaModel();
+
+        // Ambil data siswa berdasarkan kelas
+        $siswa = $siswaModel->where('id_kelas', $kelasLama)->findAll();
+
+        if (empty($siswa)) {
+            // Jika tidak ada siswa dengan kelas tersebut, tampilkan pesan error
+            return "Tidak ada siswa dengan kelas $kelasLama";
+        }
+
+        // Looping untuk melakukan update data siswa
+        foreach ($siswa as $row) {
+            // Lakukan update data siswa di sini
+            // Contoh:
+            $siswaModel->update($row['id_siswa'], ['id_kelas' => $kelasBaru]);
+
+            // Tambahkan log atau pesan sukses jika diperlukan
+        }
+
+        return redirect()->to('/siswa');
+    }
 }

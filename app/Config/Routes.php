@@ -98,6 +98,8 @@ $routes->delete('kelas/(:num)', 'Kelas::delete/$1', ['filter' => 'auth']);
 // Siswa
 $routes->get('siswa', 'Siswa::index', ['filter' => 'auth']);
 $routes->get('siswa/siswa', 'Siswa::siswa', ['filter' => 'auth']);
+$routes->get('siswa/kelas', 'Siswa::kelas', ['filter' => 'auth']);
+$routes->post('siswa/kelas/update', 'Siswa::updateByKelas', ['filter' => 'auth']);
 $routes->post('siswa/save', 'Siswa::save', ['filter' => 'auth']);
 $routes->get('siswa/edit/(:num)', 'Siswa::edit/$1', ['filter' => 'auth']);
 $routes->get('siswa/detail/(:num)', 'Siswa::detail/$1', ['filter' => 'auth']);

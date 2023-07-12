@@ -79,7 +79,7 @@
         <div class="col-8">
             <div class="card w-100">
                 <div class="card-body p-4">
-                    <h5 class="card-title fw-semibold mb-4">Data Siswa</h5>
+                    <h5 class="card-title fw-semibold mb-4">Data Siswa <a href="/siswa/kelas" class="btn btn-sm bg-warning text-white float-end">Update Kelas Siswa All</a> </h5>
                     <div class="table-responsive">
                         <table id="data1" class="table table-avatar bg-grey text-black" style="width:100%">
                             <thead>

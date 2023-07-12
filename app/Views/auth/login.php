@@ -71,11 +71,7 @@
                             </form>
                             <hr>
 
-                            <?php if ($config->allowRegistration) : ?>
-                                <div class="text-center">
-                                    <p><a class="small" href="<?= route_to('register') ?>"><?= lang('Auth.needAnAccount') ?></a></p>
-                                </div>
-                            <?php endif; ?>
+
                             <?php if ($config->activeResetter) : ?>
                                 <div class="text-center">
                                     <p><a class="small" href="<?= route_to('forgot') ?>"><?= lang('Auth.forgotYourPassword') ?></a></p>
