@@ -130,6 +130,7 @@ class Kelas extends BaseController
 
     public function delete($id_kelas)
     {
+        $this->siswaModel->deleteSiswa($id_kelas);
         $this->kelasModel->delete($id_kelas);
         session()->setFlashdata('pesan', 'Data Kelas Berhasil Dihapus.');
         return redirect()->to('/kelas');

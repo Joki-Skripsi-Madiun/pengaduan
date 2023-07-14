@@ -25,7 +25,7 @@ class SiswaModel extends Model
             $db      = \Config\Database::connect();
             $builder = $db->table('siswa');
             $builder->select('*');
-            $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+            $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
             $builder->orderBy('siswa.id_siswa', 'ASC');
             $query = $builder->get();
             return $query->getResultArray();
@@ -33,7 +33,7 @@ class SiswaModel extends Model
         $db      = \Config\Database::connect();
         $builder = $db->table('siswa');
         $builder->select('*');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->where('id_siswa', $id_siswa);
         $builder->orderBy('siswa.id_siswa', 'ACS');
         $query = $builder->get();
@@ -67,5 +67,13 @@ class SiswaModel extends Model
         $query->where('id_kelas', $kelas);
         $result = $query->countAllResults();
         return $result;
+    }
+
+    public function deleteSiswa($id_kelas)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('siswa');
+        $query->where('id_kelas', $id_kelas);
+        $query->delete();
     }
 }

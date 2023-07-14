@@ -18,9 +18,9 @@
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Kelas</label>
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_kelas">
-                                <option value="<?= $joinsiswa[0]['nama_kelas'] ?>" selected><?= $joinsiswa[0]['nama_kelas'] ?></option>
+                                <option value="<?= $joinsiswa[0]['id_kelas'] ?>" selected><?= $joinsiswa[0]['nama_kelas'] ?></option>
                                 <?php foreach ($kelas as $k) : ?>
-                                    <option value="<?= $k['nama_kelas'] ?>"><?= $k['nama_kelas'] ?></option>
+                                    <option value="<?= $k['id_kelas'] ?>"><?= $k['nama_kelas'] ?></option>
                                 <?php endforeach ?>
                             </select>
                         </div>

@@ -39,7 +39,7 @@
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example" name="id_kelas">
                                 <option selected>Open this select menu</option>
                                 <?php foreach ($kelas as $k) : ?>
-                                    <option value="<?= $k['nama_kelas'] ?>"><?= $k['nama_kelas'] ?></option>
+                                    <option value="<?= $k['id_kelas'] ?>"><?= $k['nama_kelas'] ?></option>
                                 <?php endforeach ?>
                             </select>
                         </div>

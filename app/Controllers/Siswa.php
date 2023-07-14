@@ -214,9 +214,10 @@ class Siswa extends BaseController
 
             // Mulai dari baris kedua untuk menghindari header
             for ($i = 1; $i < count($rows); $i++) {
+                $kelas = $this->kelasModel->where('nama_kelas', $rows[$i][1])->findAll();
                 $data = [
                     'nama_siswa' => $rows[$i][0],
-                    'id_kelas' => $rows[$i][1],
+                    'id_kelas' =>  $kelas[0]['id_kelas'],
                     'no_induk' => $rows[$i][2],
                     'jenis_kelamin' => $rows[$i][3],
                     'tgl_lahir' => $rows[$i][4],
