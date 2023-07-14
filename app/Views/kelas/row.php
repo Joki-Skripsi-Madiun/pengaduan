@@ -29,7 +29,7 @@
 
                 <input type="hidden" name="_method" value="DELETE">
 
-                <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" onclick="return confirm('Apakah Anda Yakin, Menghapus kelas juga akan menghapus siswa di dalam kelas ?');"><i class="fas fa-edit fa-sm text-white-50"></i> Hapus</a> </button>
+                <button type="submit" class="d-none d-sm-inline-block btn btn-sm btn-danger shadow-sm" onclick="return confirm('Apakah Anda Yakin, Menghapus kelas juga akan menghapus siswa,prestasi,pelanggaran di dalam kelas ?');"><i class="fas fa-edit fa-sm text-white-50"></i> Hapus</a> </button>
 
             </form>
         </div>

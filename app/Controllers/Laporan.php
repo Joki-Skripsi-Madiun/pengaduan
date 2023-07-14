@@ -25,7 +25,7 @@ class Laporan extends BaseController
             $dataRow['no'] = $no++;
             $dataRow['setting'] = $this->landingModel->getlanding(1);
             $dataRow['jumlahBobot'] = $this->pelanggaranModel->joinPelanggaranSumBobot($row['id_siswa']);
-            $dataRow['kelas'] = $this->kelasModel->where('nama_kelas', $row['id_kelas'])->findAll();
+            $dataRow['kelas'] = $this->kelasModel->where('id_kelas', $row['id_kelas'])->findAll();
             $dataRow['row'] = $row;
             $data['row' . $row['id_siswa']] = view('laporan/row', $dataRow);
         }

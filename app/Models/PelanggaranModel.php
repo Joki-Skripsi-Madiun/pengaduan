@@ -27,7 +27,7 @@ class PelanggaranModel extends Model
             $builder = $db->table('pelanggaran');
             $builder->select('*');
             $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
-            $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+            $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
             $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
             $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
             $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
@@ -38,7 +38,7 @@ class PelanggaranModel extends Model
         $builder = $db->table('pelanggaran');
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('id_pelanggaran', $id_pelanggaran);
@@ -53,7 +53,7 @@ class PelanggaranModel extends Model
         $builder = $db->table('pelanggaran');
         $builder->selectSum('jenis_pelanggaran.bobot');
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('pelanggaran.id_siswa', $id_siswa);
@@ -68,7 +68,7 @@ class PelanggaranModel extends Model
         $builder = $db->table('pelanggaran');
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
@@ -84,7 +84,7 @@ class PelanggaranModel extends Model
         $builder = $db->table('pelanggaran');
         $builder->select('*, pelanggaran.id_siswa AS siswa_id');
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
         $builder->where('pelanggaran.id_siswa', $id_siswa);
@@ -99,10 +99,10 @@ class PelanggaranModel extends Model
         $builder = $db->table('pelanggaran');
         $builder->select('*, pelanggaran.id_siswa AS siswa_id');
         $builder->join('siswa', 'siswa.id_siswa = pelanggaran.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->join('jenis_pelanggaran', 'jenis_pelanggaran.id_jenis = pelanggaran.id_jenis');
         $builder->join('kategori_pelanggaran', 'kategori_pelanggaran.id_kategori = jenis_pelanggaran.id_kategori');
-        $builder->where('kelas.nama_kelas', $kelas);
+        $builder->where('kelas.id_kelas', $kelas);
         $builder->where('YEAR(pelanggaran.waktu)', $tahun);
         $builder->orderBy('pelanggaran.id_pelanggaran', 'ACS');
         $query = $builder->get();
@@ -116,5 +116,13 @@ class PelanggaranModel extends Model
         $query->selectCount('id_pelanggaran');
         $result = $query->countAllResults();
         return $result;
+    }
+
+    public function deletePelanggaran($id_siswa)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('pelanggaran');
+        $query->where('id_siswa', $id_siswa);
+        $query->delete();
     }
 }

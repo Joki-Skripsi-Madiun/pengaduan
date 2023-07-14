@@ -28,7 +28,7 @@ class PrestasiModel extends Model
             $builder = $db->table('prestasi');
             $builder->select('*');
             $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
-            $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+            $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
             $builder->orderBy('prestasi.id_prestasi', 'ACS');
             $query = $builder->get();
             return $query->getResultArray();
@@ -37,7 +37,7 @@ class PrestasiModel extends Model
         $builder = $db->table('prestasi');
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->where('id_prestasi', $id_prestasi);
         $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $query = $builder->get();
@@ -50,7 +50,7 @@ class PrestasiModel extends Model
         $builder = $db->table('prestasi');
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $builder->limit($limit);
         $query = $builder->get();
@@ -63,7 +63,7 @@ class PrestasiModel extends Model
         $builder = $db->table('prestasi');
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
         $builder->where('tingkat_prestasi', $tingkat_prestasi);
         $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $query = $builder->get();
@@ -76,8 +76,8 @@ class PrestasiModel extends Model
         $builder = $db->table('prestasi');
         $builder->select('*');
         $builder->join('siswa', 'siswa.id_siswa = prestasi.id_siswa');
-        $builder->join('kelas', 'kelas.nama_kelas = siswa.id_kelas');
-        $builder->where('nama_kelas', $kelas);
+        $builder->join('kelas', 'kelas.id_kelas = siswa.id_kelas');
+        $builder->where('siswa.id_kelas', $kelas);
         $builder->where('YEAR(prestasi.tgl_prestasi)', $tahun);
         $builder->orderBy('prestasi.id_prestasi', 'ACS');
         $query = $builder->get();
@@ -91,5 +91,13 @@ class PrestasiModel extends Model
         $query->selectCount('id_prestasi');
         $result = $query->countAllResults();
         return $result;
+    }
+
+    public function deletePrestasi($id_siswa)
+    {
+        $db = \Config\Database::connect();
+        $query = $db->table('prestasi');
+        $query->where('id_siswa', $id_siswa);
+        $query->delete();
     }
 }

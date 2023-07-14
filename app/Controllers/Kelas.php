@@ -18,7 +18,7 @@ class Kelas extends BaseController
         foreach ($data['kelas'] as $row) {
             $dataRow['no'] = $no++;
             $dataRow['setting'] = $this->landingModel->getlanding(1);
-            $dataRow['jumlahKelas'] = $this->siswaModel->hitungJumlahSiswaKelas($row['nama_kelas']);
+            $dataRow['jumlahKelas'] = $this->siswaModel->hitungJumlahSiswaKelas($row['id_kelas']);
             $dataRow['row'] = $row;
             $data['row' . $row['id_kelas']] = view('kelas/row', $dataRow);
         }
@@ -130,8 +130,15 @@ class Kelas extends BaseController
 
     public function delete($id_kelas)
     {
+        $siswa = $this->siswaModel->where('id_kelas', $id_kelas)->findAll();
+        foreach ($siswa as $s) {
+            $this->pelanggaranModel->deletePelanggaran($s['id_siswa']);
+            $this->prestasiModel->deletePrestasi($s['id_siswa']);
+        }
+
         $this->siswaModel->deleteSiswa($id_kelas);
         $this->kelasModel->delete($id_kelas);
+
         session()->setFlashdata('pesan', 'Data Kelas Berhasil Dihapus.');
         return redirect()->to('/kelas');
     }
